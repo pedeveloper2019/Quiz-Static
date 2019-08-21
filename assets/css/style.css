@@ -4,3 +4,25 @@
 .bg-deepyellow{
     background: #f7931e;
 }
+.table-borderless td{
+    border-top:none !important;
+}
+.queNo td{
+    border: 1px solid #ccc;
+    width: 2.8vw;
+    margin-left: .4vw;
+    margin-top: .4vw;
+}
+.boxbtn{
+    border: 1px solid #ccc;
+    width: 2.8vw;
+    margin-left: .4vw;
+    margin-top: .4vw;
+    cursor: default !important;
+}
+.bg-purple{
+    background: rgb(5, 36, 138);
+}
+.bg-greenblue{
+    background: linear-gradient(140deg , #28a745 10% , rgb(5, 36, 138) 90%);
+}
