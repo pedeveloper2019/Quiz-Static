@@ -26,3 +26,10 @@
 .bg-greenblue{
     background: linear-gradient(140deg , #28a745 10% , rgb(5, 36, 138) 90%);
 }
+
+/* responsive css */
+@media (min-width:200px) and (max-width: 768px){
+    .logo{
+        width: 100%;
+    }
+}
