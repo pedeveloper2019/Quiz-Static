@@ -14,21 +14,25 @@
 </head>
 
 <body>
-    <div class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <img src="assets/images/photon logo.png" alt="" srcset="" class="logo">
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-3 text-light text-center" style="border:3px solid #fff;">
-                            <i class="fa fa-user h-100 fa-5x"></i>
-                        </div>
-                        <div class="col-md-9 text-light p-3">
-                            Candidate Name : [Your Name]<br>
-                            Subject Name : [Practice Paper]
-                        </div>
+    <div class="container-flex bg-dark">
+        <div class="d-flex flex-row logo">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/images/photon logo.png" alt="Quiz logo" class="img-responsive w-50">
+            </a>
+        </div>
+        <div class="d-flex flex-row CadDetails ">
+            <div class="d-flex flex-column">
+                <i class="fa fa-user fa-4x text-light p-3" style="border: 3px solid rgb(255, 255, 255);"></i>
+            </div>
+            <div class="d-flex flex-column pl-3 pt-3 text-light">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="d-flex flex-column">
+                        <p>Candidate Name</p>
+                        <p>Subject Name</p>
+                    </div>
+                    <div class="d-flex flex-column text-warning pl-1">
+                        <p>[Your Name]</p>
+                        <p>[Subject Name]</p>
                     </div>
                 </div>
             </div>

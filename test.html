@@ -14,22 +14,25 @@
 </head>
 
 <body>
-    <div class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <img src="assets/images/photon logo.png" alt="" srcset="" class="logo">
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class=" col-xs-3 w-25 text-light text-center" style="border:3px solid #fff;">
-                            <i class="fa fa-user h-100 fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 w-75 text-light mt-1 pl-2">
-                            Candidate Name : [Your Name]<br>
-                            Subject Name : [Practice Paper]<br>
-                            Remaining Time : [Time]
-                        </div>
+    <div class="container-flex bg-dark">
+        <div class="d-flex flex-row logo">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/images/photon logo.png" alt="Quiz logo" class="img-responsive w-50">
+            </a>
+        </div>
+        <div class="d-flex flex-row CadDetails ">
+            <div class="d-flex flex-column">
+                <i class="fa fa-user fa-4x text-light p-3" style="border: 3px solid rgb(255, 255, 255);"></i>
+            </div>
+            <div class="d-flex flex-column pl-3 pt-3 text-light">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="d-flex flex-column">
+                        <p>Candidate Name</p>
+                        <p>Subject Name</p>
+                    </div>
+                    <div class="d-flex flex-column text-warning pl-1">
+                        <p>[Your Name]</p>
+                        <p>[Subject Name]</p>
                     </div>
                 </div>
             </div>
@@ -38,19 +41,19 @@
     <div class="bg-deepyellow">
         <div class="container">
             <div class="row text-light p-3">
-                <div class="col-md-6 pt-3">
+                <div class="col-md-3 pt-3">
                     <span class="h4 mr-3 mt-3">JEE-Main</span>
-                    <a href="#" class="btn btn-primary mr-1"><b>Physics</b></a>
-                    <a href="#" class="btn btn-primary mr-1"><b>Chemistry</b></a>
-                    <a href="#" class="btn btn-primary mr-1"><b>Mathematics</b></a>
                 </div>
-                <div class="col-md-3">
-                    <a href="#" class="btn btn-success mt-3">
+                <div class="col-md-6">
+                    <a href="#" class="btn btn-primary mr-1 mt-3"><b>Physics</b></a>
+                    <a href="#" class="btn btn-primary mr-1 mt-3"><b>Chemistry</b></a>
+                    <a href="#" class="btn btn-primary mr-1 mt-3"><b>Mathematics</b></a>
+                    <a href="#" class="btn btn-success mr-1 mt-3">
                         <i class="fa fa-download"></i>
                         <b>Download</b>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 pt-1">
                     <h6>Paper Language</h6>
                     <select class="custom-select">
                         <option value="eng">English</option>
@@ -62,65 +65,101 @@
         </div>
     </div>
     <div>
-        <div class="container" style="overflow: hidden; height: 75vh;">
+        <div class="container-fluid wrapper">
             <div class="row">
-                <div class="col-md-8 pt-4">
-                    <div class="questions h-50 mb-3" style="border-bottom: 1px solid black; overflow: auto;">
-                        <div class="question" style="border: 0px solid red;">
-                            <h4 class="p-2" style="border-bottom: 1px solid black;">Question 1 : </h4>
-                            <img class="" src="assets/images/questions/1.png" alt="">
-                            <table class="table table-borderless mt-2 p-5" style="border-bottom: 1px solid black;">
-                                <tbody>
-                                    <tr>
-                                        <td> <input type="radio" value="1" name="radiospage01" id="rOption1_1"> 1 )
-                                        </td>
-                                        <td> <input type="radio" value="2" name="radiospage01" id="rOption1_1"> 2 )
-                                        </td>
-                                        <td> <input type="radio" value="3" name="radiospage01" id="rOption1_1"> 3 )
-                                        </td>
-                                        <td> <input type="radio" value="4" name="radiospage01" id="rOption1_1"> 4 )
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="col-md-8 pt-4 Qwrapper">
+                    <div class="row w-100">
+                        <div class="card" style="overflow: auto;border: none;width: 100%;height: 300px;">
+                            <div class="card-body p-0">
+                                <div class="questions" style="overflow: auto;">
+                                    <div class="question" style="border: 0px solid red;">
+                                        <h4 class="p-2" style="border-bottom: 1px solid black;">Question 1 : </h4>
+                                        <img class="w-50" src="assets/images/questions/1.png" alt="">
+                                        <table class="table table-borderless mt-2 p-5"
+                                            style="border-bottom: 1px solid black;">
+                                            <tbody>
+                                                <tr>
+                                                    <td> <input type="radio" value="1" name="radiospage01"
+                                                            id="rOption1_1">
+                                                        1 )
+                                                    </td>
+                                                    <td> <input type="radio" value="2" name="radiospage01"
+                                                            id="rOption1_1">
+                                                        2 )
+                                                    </td>
+                                                    <td> <input type="radio" value="3" name="radiospage01"
+                                                            id="rOption1_1">
+                                                        3 )
+                                                    </td>
+                                                    <td> <input type="radio" value="4" name="radiospage01"
+                                                            id="rOption1_1">
+                                                        4 )
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row p-3">
-                        <button class="btn btn-success mr-2"><b>Save & Next</b></button>
-                        <button class="btn bg-deepyellow text-light mr-2"><b>Save & Mark For Review</b></button>
-                        <button class="btn mr-2" style="border: 1px solid #ccc;"><b>Clear Response</b></button>
-                        <button class="btn btn-primary mr-2"><b>Mark For review & Next</b></button>
+                    <div class="row mb-2 mt-3 pl-3">
+                        <button class="btn btn-success mr-2 mb-1"><b>Save & Next</b></button>
+                        <button class="btn bg-deepyellow text-light mr-2 mb-1"><b>Save & Mark For Review</b></button>
+                        <button class="btn mr-2 mb-1" style="border: 1px solid #ccc;"><b>Clear Response</b></button>
+                        <button class="btn btn-primary mr-2 mb-1"><b>Mark For review & Next</b></button>
                     </div>
-                    <div class="row p-3">
-                        <button class="btn p-2 pl-3 pr-3" style="border: 1px solid #ccc;">
-                            << Back </button> <button class="btn p-2 pl-3 pr-3" style="border: 1px solid #ccc;"> Next >>
-                        </button>
-                        <a href="#" class="btn btn-success  p-2 pl-4 pr-4" style="margin-left: 60%;">Submit</a>
+                    <div class="row">
+                        <div class="col-md mb-2">
+                            <button class="btn p-2 pl-3 pr-3" style="border: 1px solid #ccc;">
+                                << Back </button> <button class="btn p-2 pl-3 pr-3" style="border: 1px solid #ccc;">
+                                    Next >>
+                            </button>
+                        </div>
+                        <div class="col-md">
+                            <a href="#" class="btn btn-success">Submit</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div>
-                        <div class="row">
-                            <div class="btn boxbtn" >90</div>
-                            <div class="btn d-inline ml-2"> Not Visited</div>
-                            <div class="btn boxbtn bg-deepyellow">1</div>
-                            <div class="btn d-inline ml-2"> Not Answered</div>
-                        </div>
-                        <div class="row">
-                            <div class="btn boxbtn btn-success">0</div>
-                            <div class="btn d-inline ml-2"> Answered &nbsp;</div>
-                            <div class="btn boxbtn bg-purple text-light">0</div>
-                            <div class="btn d-inline ml-2"> Marked for Review</div>
-                        </div>
-                        <div class="row mt-2">
-                            <span class="btn boxbtn bg-greenblue text-light">0</span><span class="ml-3"> Answered & Marked for Review <br> (will be considered for evaluation)</span>
+                <div class="col-md-4 p-0 Qselect">
+                    <div class="card pl-4 m-0" style="border:none;">
+                        <div class="card-body p-0">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-5 p-0">
+                                            <div class="btn boxbtn">90</div>
+                                            <div class="btn d-inline"> Not Visited</div>
+                                    </div>
+                                    <div class="col-md-7 p-0">
+                                            <div class="btn boxbtn bg-deepyellow">1</div>
+                                            <div class="btn d-inline"> Not Answered</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 p-0">
+                                        <div class="btn boxbtn btn-success">0</div>
+                                        <div class="btn d-inline">Answered</div>
+                                    </div>
+                                    <div class="col-md-7 p-0">
+                                        <div class="btn boxbtn bg-purple text-light">0</div>
+                                        <div class="btn d-inline">Marked for Review</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <span class="btn boxbtn bg-greenblue text-light mb-2" >0</span>
+                                    <span class="ml-3">
+                                        Answered &
+                                        Marked for Review <br> (will be considered for evaluation)
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mt-3" style="overflow: auto;height: 40%;" >
-                        <table class="queNo">
+                    <div class="row mt-3 m-0" style="overflow: auto;height: 65%;">
+                        <table class="queNo h-50">
                             <tbody>
                                 <tr>
-                                    <td class="btn">1</td>
+                                    <td class="btn bg-deepyellow">1</td>
                                     <td class="btn">2</td>
                                     <td class="btn">3</td>
                                     <td class="btn">4</td>
