@@ -6,6 +6,7 @@ $(function () {
         "Question2": "3",
         "Question3": "4"
     }
+    createDivs()
     showdiv()
 
     // Counter
@@ -25,6 +26,33 @@ $(function () {
         if (currentSecs !== -1) setTimeout(decrement, 1000);
     }
 
+    function createDivs(){
+        for(let index = 1; index <= 90; index++) {
+            $(".questions").append(`<div class="question" style="border: 0px solid red;">
+            <h4 class="p-2" style="border-bottom: 1px solid black;">Question `+index +` : </h4>
+            <img class="w-50" src="assets/images/questions/`+index+`.png" alt="">
+            <table class="table table-borderless mt-2 p-5"
+                style="border-bottom: 1px solid black;">
+                <tbody>
+                    <tr>
+                        <td> <input type="radio" value="1" name="Question`+index+`" id="rOption1_1">
+                            1 )
+                        </td>
+                        <td> <input type="radio" value="2" name="Question`+index+`" id="rOption1_1">
+                            2 )
+                        </td>
+                        <td> <input type="radio" value="3" name="Question`+index+`" id="rOption1_1">
+                            3 )
+                        </td>
+                        <td> <input type="radio" value="4" name="Question`+index+`" id="rOption1_1">
+                            4 )
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>`);
+        }
+    }
     function showdiv() {
         $(".question").css("display", "none");
         $(".question:nth-child(" + viewdiv + ")").css("display", "block");
