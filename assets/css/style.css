@@ -11,6 +11,7 @@
 }
 .bg-deepyellow{
     background: #f7931e;
+    color: black;
 }
 .table-borderless td{
     border-top:none !important;
@@ -28,7 +29,10 @@
     margin-top: .4vw;
     cursor: default !important;
 }
-
+.usericon{
+    border: 3px solid rgb(255, 255, 255);
+    font-size: 4.1rem !important;
+}
 .bg-purple{
     background: rgb(5, 36, 138);
     color: white;
@@ -66,4 +70,11 @@
         padding-left: 5%;
     }
 }
-
+@media (min-width:10px) and (max-width:355px){
+    .CadDetails{
+        font-size: 4vw;
+    }
+    .usericon{
+        font-size: 15vw !important;
+    }
+}
