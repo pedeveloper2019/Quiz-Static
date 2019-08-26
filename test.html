@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <div class="hider">
+        <i class="fa fa-angle-right fa-2x bg-dark text-light">
+        </i>
+    </div>
     <div class="container-flex bg-dark">
         <div class="d-flex flex-row logo">
             <a class="navbar-brand" href="index.html">
@@ -21,10 +25,10 @@
             </a>
         </div>
         <div class="d-flex flex-row CadDetails">
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column m-2">
                 <i class="fa fa-user text-light p-2 usericon"></i>
             </div>
-            <div class="d-flex flex-column pl-3 text-light">
+            <div class="d-flex flex-column pl-3 m-2 text-light">
                 <div class="d-flex flex-row align-items-center">
                     <div class="d-flex flex-column">
                         <span>Candidate Name</span>
@@ -42,7 +46,7 @@
     </div>
     <div class="bg-deepyellow">
         <div class="container">
-            <div class="row text-light p-3">
+            <div class="row text-light p-1">
                 <div class="col-md-3 pt-3">
                     <span class="h4 mr-3 mt-3">JEE-Main</span>
                 </div>
@@ -55,12 +59,12 @@
                         <b>Download</b>
                     </a>
                 </div>
-                <div class="col-md-3 pt-1">
+                <div class="col-md-3">
                     <h6>Paper Language</h6>
                     <select class="custom-select">
                         <option value="eng">English</option>
-                        <option value="hindi">Hindi</option>
-                        <option value="mar">Marathi</option>
+                        <!-- <option value="hindi">Hindi</option> -->
+                        <!-- <option value="mar">Marathi</option> -->
                     </select>
                 </div>
             </div>
@@ -69,9 +73,9 @@
     <div>
         <div class="container-fluid wrapper">
             <div class="row">
-                <div class="col-md-8 pt-4 Qwrapper">
+                <div class="col-md-8 pt-2 Qwrapper">
                     <div class="row w-100">
-                        <div class="card" style="overflow: auto;border: none;width: 100%;height: 300px;">
+                        <div class="card questionsCard" style="overflow: auto;border: none;width: 100%;height: 300px;">
                             <div class="card-body p-0">
                                 <div class="questions" style="overflow: auto;">
                                     
@@ -79,25 +83,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-2 mt-3 pl-3">
-                        <button class="btn btn-success mr-2 mb-1 saveAnsbtn"><b>Save & Next</b></button>
-                        <button class="btn bg-deepyellow text-light mr-2 mb-1 saveAnsReview"><b>Save & Mark For
-                                Review</b></button>
-                        <button class="btn mr-2 mb-1 clearAns" style="border: 1px solid #ccc;"><b>Clear
-                                Response</b></button>
-                        <button class="btn btn-primary mr-2 mb-1 reviewbtn"><b>Mark For review & Next</b></button>
+                    <div class="row mb-2 pr-4 btnrow">
+                        <button class="btn btn-success saveAnsbtn"><b>Save & Next</b></button>
+                        <button class="btn bg-deepyellow text-light saveAnsReview"><b>Save & Mark For
+                                Review</b>
+                            </button>
                     </div>
-                    <div class="row">
-                        <div class="col-md mb-2">
-                            <button class="btn p-2 pl-3 pr-3 backbtn" style="border: 1px solid #ccc;">
-                                << Back </button> <button class="btn p-2 pl-3 pr-3 nextbtn"
+                    <div class="row mb-2 pr-4 btnrow">
+                        <button class="btn clearAns" style="border: 1px solid #ccc;"><b>Clear
+                                Response</b>
+                            </button>
+                        <button class="btn btn-primary reviewbtn"><b>Mark For review & Next</b></button>
+                    </div>
+                    <div class="row mb-2 pr-4 btnrow">
+                        <button class="btn backbtn" style="border: 1px solid #ccc;">
+                                << Back </button> 
+                        <button class="btn nextbtn"
                                     style="border: 1px solid #ccc;">
                                     Next >>
-                            </button>
-                        </div>
-                        <div class="col-md">
-                            <a href="#" class="btn btn-success submit">Submit</a>
-                        </div>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="btn btn-success submit w-50" style="margin: 0 auto;">Submit Test</a>
                     </div>
                 </div>
                 <div class="col-md-4 p-0 Qselect">
@@ -134,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-3 m-0 pl-2" style="overflow: auto;height: 65%;">
+                    <div class="questionNo row mt-3 m-0 pl-2" style="overflow: auto;height: 65%;">
                         <table class="queNo h-50">
                             <tbody>
                                 <tr>
@@ -246,7 +253,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>
-
+<script src="assets/js/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="assets/js/showQuestion.js"></script>
 
 </html>

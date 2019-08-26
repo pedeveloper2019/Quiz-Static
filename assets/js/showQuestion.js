@@ -35,17 +35,17 @@ $(function () {
                 style="border-bottom: 1px solid black;">
                 <tbody>
                     <tr>
-                        <td> <input type="radio" value="1" name="Question`+index+`" id="rOption1_1">
-                            1 )
+                        <td> 1 ) <input type="radio" value="1" name="Question`+index+`" id="rOption1_1">
+                           
                         </td>
-                        <td> <input type="radio" value="2" name="Question`+index+`" id="rOption1_1">
-                            2 )
+                        <td> 2 ) <input type="radio" value="2" name="Question`+index+`" id="rOption1_1">
+                            
                         </td>
-                        <td> <input type="radio" value="3" name="Question`+index+`" id="rOption1_1">
-                            3 )
+                        <td> 3 ) <input type="radio" value="3" name="Question`+index+`" id="rOption1_1">
+                            
                         </td>
-                        <td> <input type="radio" value="4" name="Question`+index+`" id="rOption1_1">
-                            4 )
+                        <td> 4 ) <input type="radio" value="4" name="Question`+index+`" id="rOption1_1">
+                            
                         </td>
                     </tr>
                 </tbody>
