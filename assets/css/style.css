@@ -44,7 +44,7 @@ img{
 }
 .bg-greenblue{
     /* background-image: radial-gradient(ellipse farthest-corner 160deg , #28a745 40% , rgb(5, 36, 138) 90%) !important; */
-    background-image:radial-gradient(ellipse farthest-corner at 0 5%, rgb(5, 36, 138) 0%, rgb(5, 36, 138) 70%, #28a745 70%);
+    background-image:radial-gradient(ellipse farthest-corner at 0 5%, rgb(5, 36, 138) 0%, rgb(5, 36, 138) 70%, #28a745 70%) !important;
     color: white;
 }
 .Qwrapper{
