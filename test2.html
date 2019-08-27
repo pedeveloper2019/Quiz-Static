@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-dark">
+            <div class="col-md-10">
+                <a href="index.html">
+                    <img src="assets/images/photon logo.png" alt="" srcset="" style="width: 15%;">
+                </a>
+            </div>
+            <div class="col-md-2 text-light pt-2">
+                <span>Remaining Time : </span>
+                <span class="remainCounter">[00:00:00]</span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="d-flex flex-row">
+            <div class="col-md-9 p-2" style="height: 92.5vh;">
+                <div class="d-flex flex-row btnrow2 justify-content-center">
+                    <a href="#" class="btn m-1 active">Physics</a>
+                    <a href="#" class="btn m-1">Chemistry</a>
+                    <a href="#" class="btn m-1">Biology</a>
+                </div>
+                <div class="row Qwrapper" style="height: 84%;overflow: auto;border-bottom: 1px solid #ccc;">
+                    <div class="w-100 p-2 Questions">
+                        
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center btnrow2 Qfooter">
+                    <button class="btn m-1 active saveAnsbtn">Save</button>
+                    <button class="btn m-1 reviewbtn">Review Later</button>
+                    <button class="btn m-1 clearAns">Clear Selection</button>
+                </div>
+            </div>
+            <div class="col-md-3 ml-2 p-3" style="background: #f5f5f5;height: 92.5vh;">
+                <h5 class="">Question Overview:</h5>
+                <div class="QuestionNo row mt-2 pt-2 ml-1" style="overflow: auto;height: 53%;">
+                    <table class="QueNo h-50">
+                        <tbody>
+                            <tr class="QnOwrapper">
+                               
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table class="h-50 w-100">
+                        <tbody class="legends w-100">
+                            <tr>
+                                <td class="btn attempted">&nbsp;</td>
+                                <td class="d-inline">Attempted&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td class="btn unattempted">&nbsp;</td>
+                                <td class="d-inline">Not Attempted</td>
+                            </tr>
+                            <tr>
+                                <td class="btn review">&nbsp;</td>
+                                <td class="d-inline">To be reviewed</td>
+                                <td class="btn unseen">&nbsp;</td>
+                                <td class="d-inline">Not viewed yet</td>
+                            </tr>
+                            <tr>
+                                <td class="btn Ansreview">&nbsp;</td>
+                                <td class="d-inline">Attempted and Marked for reviewed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <button class="w-100 mt-3 btn bg-light" style="border:1px solid #ccc;">Instructions</button>
+                    <button class="w-100 mt-1 btn bg-light" style="border:1px solid #ccc;">Questions</button>
+                    <button class="w-100 mt-1 btn bg-light" style="border:1px solid #ccc;">Finish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="assets/js/showQuestion2.js"></script>
+<!-- <script src="assets/js/sideHide.js"></script> -->
+
+</html>
