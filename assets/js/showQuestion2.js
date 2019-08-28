@@ -1,5 +1,16 @@
 $(function () {
     // alert("I'm ready")
+    // Page Logic
+    height = $(".header").height();
+    $(".mainContainer").css("top", height);
+    $(".slider").click(function (e) { 
+        e.preventDefault();
+        // alert()
+        $(".rightSide").toggleClass("sideLength");
+    });
+    
+
+    // Exam Logic
     viewdiv = 1
     answers = {
         "Question1": "2",
@@ -34,7 +45,7 @@ $(function () {
                 <div class="w-50 text-right font-weight-bold">Single Choice Type Question</div>
             </div>
             <div class="row w-100 ml-1">
-                <img src="assets/images/questions/`+index+`.png" alt="">
+                <img class="QuestionImg" src="assets/images/questions/`+index+`.png" alt="">
                 <table class="table table-borderless mt-2">
                     <tbody>
                         <tr>
