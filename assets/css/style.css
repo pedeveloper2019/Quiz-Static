@@ -927,6 +927,12 @@ img{
 }
 
 /* Summary Style */
+.topLogo img{
+    width: 150px;
+}
+.mainContainer .card{
+    margin-top: 2vw;
+}
 .bg-lightgreen{
     background: #addbae;
 }
