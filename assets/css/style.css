@@ -10,24 +10,37 @@
 img{
     pointer-events: none;
 }
+.Answered{
+    width: 30px; 
+    height: 30px;
+    margin-left: 4px;
+    padding: 0px !important;
+    cursor: default !important;
+    border: none;
+}
 .CadDetails{
     /* border: 1px solid red; */
     width: 60%;
     padding-left: 25%;
 }
 .bg-deepyellow{
-    background: #f7931e;
+    background: #f7931e !important;
     color: black;
 }
 .table-borderless td{
     border-top:none !important;
 }
-.queNo td{
-    border: 1px solid #ccc;
-    width: 40px;
-    margin-left: .4vw;
+.queNo td ,.nvisit{
+    border: 1px solid #ddd;
+    width: 33px;
+    height: 30px;
+    padding: 0;
+    margin-left: .2vw;
     margin-top: .4vw;
-    border-radius: 50%;
+    border-radius: 20%;
+    background-image: url(../../assets/images/Logo1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 .boxbtn{
     border: 1px solid #ccc;
@@ -64,10 +77,12 @@ img{
     padding-right: 10%;
 }
 .btnrow button{
-    width: 48%;
+    width: 23.5%;
     /* height: 50px; */
     overflow: hidden;
     margin-left: 1%;
+    /* padding: 0px; */
+    font-size: .9vw;
 }
 .question{
     position: absolute;
@@ -199,13 +214,13 @@ img{
 }
 .QueNo td.unseen{
     border: 1px solid #ccc;
-    width: 11.5%;
-    height: 5.5%;
+    width: 8%;
+    height: 6.5%;
     padding: 0px;
     vertical-align: middle;
-    padding-top: .2vw;
-    font-size: 1.2vw;
-    margin-left: .6vw;
+    /* padding-top: .2vw; */
+    font-size: 1vw;
+    margin-left: .3vw;
     margin-top: 1.3vw;
     font-weight: bold;
     color: white;
@@ -215,13 +230,13 @@ img{
     text-indent: -2px;
 }
 .QueNo td.attempted{
-    width: 11.5%;
-    height: 5.5%;
+    width: 8%;
+    height: 6.5%;
     padding: 0px;
     vertical-align: middle;
-    padding-top: .2vw;
-    font-size: 1.2vw;
-    margin-left: .6vw;
+    /* padding-top: .2vw; */
+    font-size: 1vw;
+    margin-left: .3vw;
     margin-top: 1.5vw;
     border: none !important;
     background-color: #29B999;
@@ -233,8 +248,8 @@ img{
 .QueNo td.attempted::before{
     width: 0;
     height: 0;
-    border-left: 1.3vw solid transparent;
-    border-right: 1.3vw solid transparent;
+    border-left: .87vw solid transparent;
+    border-right: .87vw solid transparent;
     border-bottom: 8px solid #29B999;
     content: "";
     position: absolute;
@@ -242,13 +257,13 @@ img{
     left: 0;
 }
 .QueNo td.unattempted{
-    width: 11.5%;
-    height: 5.5%;
+    width: 8%;
+    height: 6.5%;
     padding: 0px;
     vertical-align: middle;
-    padding-top: .2vw;
-    font-size: 1.2vw;
-    margin-left: .6vw;
+    /* padding-top: .2vw; */
+    font-size: 1vw;
+    margin-left: .3vw;
     margin-top: 1.5vw;
     border: none !important;
     background-color: #ED6060;
@@ -260,8 +275,8 @@ img{
 .QueNo td.unattempted::after{
     width: 0;
     height: 0;
-    border-left: 1.3vw solid transparent;
-    border-right: 1.3vw solid transparent;
+    border-left: .87vw solid transparent;
+    border-right: .87vw solid transparent;
     border-top: 8px solid #ED6060;
     content: "";
     position: absolute;
@@ -270,13 +285,13 @@ img{
 }
 .QueNo td.review{
     border: 1px solid #ccc;
-    width: 11.5%;
-    height: 5.5%;
+    width: 8%;
+    height: 6.5%;
     padding: 0px;
     vertical-align: middle;
-    padding-top: .2vw;
-    font-size: 1.2vw;
-    margin-left: .6vw;
+    /* padding-top: .2vw; */
+    font-size: 1vw;
+    margin-left: .3vw;
     margin-top: 1.5vw;
     font-weight: bold;
     color: white;
@@ -287,14 +302,14 @@ img{
 }
 .QueNo td.Ansreview{
     border: 1px solid #ccc;
-    width: 11.5%;
-    height: 5.5%;
+    width: 8%;
+    height: 6.5%;
     padding: 0px;
     vertical-align: middle;
-    padding-top: .2vw;
+    /* padding-top: .2vw; */
     padding-left: .4vw;
-    font-size: 1.2vw;
-    margin-left: .6vw;
+    font-size: 1vw;
+    margin-left: .3vw;
     margin-top: 1.5vw;
     font-weight: bold;
     color: white;
@@ -306,14 +321,14 @@ img{
 .QueNo td.Ansreview::after{
     content: '\2713';
     position: relative;
-    top: 1vw;
+    top: .5vw;
     right: .2vw;
     background-color: #86D37C;
     border-radius: 50%;
-    font-size: .9vw;
+    font-size: .45vw;
     border: 2px solid #fff;
     padding-left: .2vw;
-    padding-right: .3vw;
+    padding-right: .2vw;
     text-indent: 0px;
 }
 
@@ -420,7 +435,7 @@ img{
     height: 7.5vh;
 }
 .Qwrapper{
-    height: 75vh;overflow: auto;
+    height: 73vh;overflow: auto;
     border-bottom: 1px solid #ccc;
 }
 @media (min-width:470px) and (max-width:900px){
