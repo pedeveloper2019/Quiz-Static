@@ -73,7 +73,7 @@ $(function () {
         for(let index = 1; index <= 90; index++) {
             if(index<=9)
             {
-                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="`+index+`">`+index+`&nbsp;</td>`);
+                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="`+index+`">&nbsp;`+index+`</td>`);
             }else{
                 $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="`+index+`">`+index+`</td>`);
             }
@@ -108,16 +108,22 @@ $(function () {
     $(".phybtn").click(function (e) {
         e.preventDefault();
         viewdiv = 1
+        $(".btnrow2 .btn").removeClass("active");
+        $(this).addClass("active");
         showdiv()
     });
     $(".chembtn").click(function (e) {
         e.preventDefault();
         viewdiv = 31
+        $(".btnrow2 .btn").removeClass("active");
+        $(this).addClass("active");
         showdiv()
     });
-    $(".mathsbtn").click(function (e) {
+    $(".biobtn").click(function (e) {
         e.preventDefault();
         viewdiv = 61
+        $(".btnrow2 .btn").removeClass("active");
+        $(this).addClass("active");
         showdiv()
     });
     // Save Answer Button
