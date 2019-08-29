@@ -1,4 +1,7 @@
 
+.bg-lightprimary{
+    background:#29bef3 !important;
+}
 .logo{
     /* border: 1px solid red; */
     width: 40%;
@@ -1013,4 +1016,14 @@ img{
     /* .summary div{
         padding-left: 30%;
     } */
+}
+
+/* Instructions2 style */
+.instr{
+    width: 75%;
+}
+@media (min-width:10px) and (max-width:800px){
+    .instr{
+        width: 100%;
+    }
 }
