@@ -72,6 +72,12 @@ img{
     /* overflow: auto; */
     height: 69vh;
 }
+.legend .d-inline{
+    font-size: 1vw;
+}
+.legend{
+    font-size: 1vw;
+}
 .wrapper{
     padding-left:10%;
     padding-right: 10%;
