@@ -1,5 +1,13 @@
 $(function () {
     // alert("I'm ready")
+    $(".toggleTop").click(function (e) { 
+        e.preventDefault();
+        // alert()
+        // $(".CadDetails").css("display", "none");
+        $(".topVertical").toggleClass("d-None")
+        $(".topBar").toggle();
+        $(".thinBar").toggleClass("d-inlineBlock")
+    });
     viewdiv = 1
     answers = {
         "Question1": "2",

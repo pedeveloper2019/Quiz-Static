@@ -18,50 +18,54 @@
         <i class="fa fa-angle-right fa-2x bg-dark text-light">
         </i>
     </div>
-    <div class="container-flex bg-dark">
-        <div class="d-flex flex-row logo">
-            <a class="navbar-brand" href="index.html">
-                <img src="/assets/images/photon logo.png" alt="Quiz logo" class="img-responsive w-50">
+    <div class="d-flex align-items-center bg-dark p-1">
+        <div class="d-flex ml-2" style="width: 12%;">
+            <a href="index.html">
+                <img src="/assets/images/photon logo.png" alt="Quiz logo" class="w-100">
             </a>
         </div>
-        <div class="d-flex flex-row CadDetails">
-            <div class="d-flex flex-column m-2">
-                <i class="fa fa-user text-light p-2 usericon"></i>
+        <div class="d-flex align-self-center thinBar  text-light ml-auto mr-auto">
+            <a class="btn btn-primary mr-1 mt-1 mb-1 phybtn"><b>Physics</b></a>
+            <a class="btn btn-primary mr-1 mt-1 mb-1 chembtn"><b>Chemistry</b></a>
+            <a class="btn btn-primary mr-1 mt-1 mb-1 mathsbtn"><b>Mathematics</b></a>
+            <span class="btn btn-dark mt-1 mb-1">Candidate Name <span>: [Your Name]</span></span>
+            <span class="btn btn-dark mt-1 mb-1"> Remaining Time <span class="remainCounter">[00:00:00]</span></span>
+        </div>
+        <div class="d-flex p-2 align-self-center ml-auto topVertical" style="border: 3px solid white;">
+            <i class="fa fa-user text-light align-self-center" style="font-size:1.2vw;"></i>
+        </div>
+        <div class="d-flex text-light align-self-center topVertical" style="width: 21%;font-size: 1vw;">
+            <div class="d-flex flex-column pl-3 w-100">
+                <span>Candidate Name&nbsp;</span>
+                <span>Remaining Time</span>
             </div>
-            <div class="d-flex flex-column pl-3 m-2 text-light">
-                <div class="d-flex flex-row align-items-center">
-                    <div class="d-flex flex-column">
-                        <span>Candidate Name</span>
-                        <span>Subject Name</span>
-                        <span>Remaining Time</span>
-                    </div>
-                    <div class="d-flex flex-column text-warning pl-1 m-1">
-                        <span>[Your Name]</span>
-                        <span>[Subject Name]</span>
-                        <span class="remainCounter">[00:00:00]</span>
-                    </div>
-                </div>
+            <div class="d-flex flex-column w-100">
+                <span class="text-warning">[Your Name]</span>
+                <span class="remainCounter text-warning">[00:00:00]</span>
             </div>
         </div>
+        <div class="d-flex ml-auto mr-5">
+            <i class="fa fa-bars text-light toggleTop"></i>
+        </div>
     </div>
-    <div class="bg-deepyellow">
-        <div class="container">
+    <div class="bg-deepyellow topBar">
+        <div class="container-fluid">
             <div class="row text-light p-1">
-                <div class="col-md-3 pt-3">
-                    <span class="h4 mr-3 mt-3">JEE-Main</span>
+                <div class="col-md-3">
+                    <span class="h4 mr-3">JEE-Main</span>
                 </div>
                 <div class="col-md-6">
-                    <a class="btn btn-primary mr-1 mt-3 phybtn"><b>Physics</b></a>
-                    <a class="btn btn-primary mr-1 mt-3 chembtn"><b>Chemistry</b></a>
-                    <a class="btn btn-primary mr-1 mt-3 mathsbtn"><b>Mathematics</b></a>
-                    <a href="#" class="btn btn-success mr-1 mt-3">
+                    <a class="btn btn-primary mr-1 phybtn"><b>Physics</b></a>
+                    <a class="btn btn-primary mr-1 chembtn"><b>Chemistry</b></a>
+                    <a class="btn btn-primary mr-1 mathsbtn"><b>Mathematics</b></a>
+                    <!-- <a href="#" class="btn btn-success mr-1 mt-3">
                         <i class="fa fa-download"></i>
                         <b>Download</b>
-                    </a>
+                    </a> -->
                 </div>
-                <div class="col-md-3">
-                    <h6>Paper Language</h6>
-                    <select class="custom-select">
+                <div class="col-md-3 float-right pr-5">
+                    <span class="text-right">Paper Language</span>
+                    <select class="custom-select float-right" style="width: 10vw;">
                         <option value="eng">English</option>
                         <!-- <option value="hindi">Hindi</option> -->
                         <!-- <option value="mar">Marathi</option> -->
@@ -71,73 +75,38 @@
         </div>
     </div>
     <div>
-        <div class="container-fluid wrapper">
+        <div class="container-fluid wrapper mt-3 ml-1">
             <div class="row">
-                <div class="col-md-8 pt-2 Qwrapper">
+                <div class="col-md-8 pt-2 w-100 QWrapper">
                     <div class="row w-100">
-                        <div class="card questionsCard" style="overflow: auto;border: none;width: 100%;height: 300px;">
+                        <div class="card questionsCard" style="overflow: auto;border: none;width: 100%;height:300px;">
                             <div class="card-body p-0">
                                 <div class="questions" style="overflow: auto;">
-                                    
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-2 pr-4 btnrow">
+                    <div class="row mb-2 mt-4 pr-4 btnrow fixedbtns">
                         <button class="btn btn-success saveAnsbtn"><b>Save & Next</b></button>
                         <button class="btn bg-deepyellow text-light saveAnsReview"><b>Save & Mark For
                                 Review</b>
-                            </button>
-                            <button class="btn clearAns" style="border: 1px solid #ccc;"><b>Clear
-                                Response</b>
-                            </button>
-                        <button class="btn btn-primary reviewbtn"><b>Mark For review & Next</b></button>
-                    </div>
-                    <div class="row mb-2 pr-4 btnrow">
-                        <button class="btn backbtn" style="border: 1px solid #ccc;">
-                                << Back </button> 
-                        <button class="btn nextbtn"
-                                    style="border: 1px solid #ccc;">
-                                    Next >>
                         </button>
-                        <a href="#" class="btn btn-success submit w-25" style="margin: 0 auto;">Submit Test</a>
+                        <button class="btn clearAns" style="border: 1px solid #ccc;"><b>Clear
+                                Response</b>
+                        </button>
+                        <button class="btn btn-primary reviewbtn"><b>Mark For Review & Next</b></button>
+                        <button class="btn backbtn mt-3"><b>
+                                << Back</b> </button> <button class="btn nextbtn mt-3"><b>Next >></b></button>
+                        <a href="#" class="btn btn-success submit w-25 mt-3 float-right" style="margin: 0 auto;"><b>Submit
+                                Test</b></a>
+                    </div>
+                    <div class="row mb-2 mt-4 pr-4 btnrow">
+
                     </div>
                 </div>
                 <div class="col-md-4 p-0 Qselect">
-                    <div class="card pl-4 m-0" style="border:none;">
-                        <div class="card-body p-0 legend">
-                            <div>
-                                <div class="row">
-                                    <div class="col-md-5 p-0">
-                                        <div class="btn nvisit">90</div>
-                                        <div class="btn d-inline"> Not Visited</div>
-                                    </div>
-                                    <div class="col-md-7 p-0">
-                                        <div class="btn nvisit bg-deepyellow">1</div>
-                                        <div class="btn d-inline"> Not Answered</div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5 p-0 mt-1">
-                                        <div class="btn bg-success text-light Answered">0</div>
-                                        <div class="btn d-inline">Answered</div>
-                                    </div>
-                                    <div class="col-md-7 p-0 mt-1">
-                                        <div class="btn Answered bg-purple text-light">0</div>
-                                        <div class="btn d-inline">Marked for Review</div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <span class="btn Answered bg-greenblue text-light mb-2">0</span>
-                                    <span class="ml-3">
-                                        Answered &
-                                        Marked for Review <br> (will be considered for evaluation)
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="questionNo row mt-3 m-0 pl-2" style="overflow: auto;height: 65%;">
+                    <div class="questionNo row m-0 pl-2 pr-1" style="overflow: auto;height: 70%;">
                         <table class="queNo h-50">
                             <tbody>
                                 <tr>
@@ -235,6 +204,39 @@
                             </tbody>
                         </table>
                     </div>
+                    <div class="card pl-4 m-0 mt-4" style="border:none;">
+                        <div class="card-body p-0 legend">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-5 p-0">
+                                        <div class="btn nvisit">90</div>
+                                        <div class="btn d-inline"> Not Visited</div>
+                                    </div>
+                                    <div class="col-md-7 p-0">
+                                        <div class="btn nvisit bg-deepyellow">1</div>
+                                        <div class="btn d-inline"> Not Answered</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 p-0 mt-1">
+                                        <div class="btn bg-success text-light Answered">0</div>
+                                        <div class="btn d-inline">Answered</div>
+                                    </div>
+                                    <div class="col-md-7 p-0 mt-1">
+                                        <div class="btn Answered bg-purple text-light">0</div>
+                                        <div class="btn d-inline">Marked for Review</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <span class="btn Answered bg-greenblue text-light mb-2">0</span>
+                                    <span class="ml-3">
+                                        Answered &
+                                        Marked for Review <br> (will be considered for evaluation)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,4 +253,5 @@
 </script>
 <script src="assets/js/showQuestion.js"></script>
 <script src="assets/js/sideHide.js"></script>
+
 </html>

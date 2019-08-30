@@ -2,7 +2,8 @@ $(function () {
     $(".hider").click(function (e) { 
         e.preventDefault();
         $(".Qselect").toggle();
-        $(".Qwrapper").toggleClass("col-md-12");
+        $(".QWrapper").toggleClass("col-md-12");
+        $(".QWrapper .question img").toggleClass("w-50");
     });
     
 });
