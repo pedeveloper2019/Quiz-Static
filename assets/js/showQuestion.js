@@ -1,14 +1,16 @@
 $(function () {
     // alert("I'm ready")
-    $(".toggleTop").click(function (e) { 
+    $(".toggleTop").click(function (e) {
         e.preventDefault();
         // alert()
         // $(".CadDetails").css("display", "none");
         $(".topVertical").toggleClass("d-None")
-        $(".topBar").toggle();
+        $(".topBar").toggleClass("d-None");
         $(".thinBar").toggleClass("d-inlineBlock")
     });
     viewdiv = 1
+    viewrow = 1
+
     answers = {
         "Question1": "2",
         "Question2": "3",
@@ -29,30 +31,30 @@ $(function () {
         if (displayedMin <= 9) displayedMin = "0" + displayedMin;
         if (displayedSecs <= 9) displayedSecs = "0" + displayedSecs;
         currentSecs--;
-        $(".remainCounter").html("["+displayedHrs + ":" + displayedMin + ":" +
-            displayedSecs+"]");
+        $(".remainCounter").html("[" + displayedHrs + ":" + displayedMin + ":" +
+            displayedSecs + "]");
         if (currentSecs !== -1) setTimeout(decrement, 1000);
     }
 
-    function createDivs(){
-        for(let index = 1; index <= 90; index++) {
+    function createDivs() {
+        for (let index = 1; index <= 90; index++) {
             $(".questions").append(`<div class="question" style="border: 0px solid red;">
-            <h4 class="p-2" style="border-bottom: 1px solid black;">Question `+index +` : </h4>
-            <img class="w-50" src="assets/images/questions/`+index+`.png" alt="">
+            <h4 class="p-2" style="border-bottom: 1px solid black;">Question ` + index + ` : </h4>
+            <img class="w-50" src="assets/images/questions/` + index + `.png" alt="">
             <table class="table table-borderless mt-2 p-5"
                 style="border-bottom: 1px solid black;">
                 <tbody>
                     <tr>
-                        <td> 1 ) <input type="radio" value="1" name="Question`+index+`" id="rOption1_1">
+                        <td> 1 ) <input type="radio" value="1" name="Question` + index + `" id="rOption1_1">
                            
                         </td>
-                        <td> 2 ) <input type="radio" value="2" name="Question`+index+`" id="rOption1_1">
+                        <td> 2 ) <input type="radio" value="2" name="Question` + index + `" id="rOption1_1">
                             
                         </td>
-                        <td> 3 ) <input type="radio" value="3" name="Question`+index+`" id="rOption1_1">
+                        <td> 3 ) <input type="radio" value="3" name="Question` + index + `" id="rOption1_1">
                             
                         </td>
-                        <td> 4 ) <input type="radio" value="4" name="Question`+index+`" id="rOption1_1">
+                        <td> 4 ) <input type="radio" value="4" name="Question` + index + `" id="rOption1_1">
                             
                         </td>
                     </tr>
@@ -61,24 +63,49 @@ $(function () {
         </div>`);
         }
     }
+
     function showdiv() {
+        if (viewdiv < 10) {
+            viewrow = 1
+        } else {
+            viewrow = Math.floor(viewdiv / 10)
+            viewrow = +viewrow + 1
+        }
+        viewqueNo = (viewdiv % 10)
+        // alert(viewrow)
         $(".question").css("display", "none");
         $(".question:nth-child(" + viewdiv + ")").css("display", "block");
-        if (!$(".queNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("bg-success") ||
-            !$(".queNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("bg-greenblue") || !$(".queNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("bg-purple")) {
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("bg-deepyellow");
+        if ( !$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("answered")) 
+        {
+           if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("saveNremark")) {
+               if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("remark")) {
+                $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("visited");
+               }
+           }
         }
     }
 
     function saveNreview() {
         if ($(".question:nth-child(" + viewdiv + ") table tbody td input").is(":checked")) {
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("bg-deepyellow");
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("bg-greenblue");
+            if (viewdiv < 10) {
+                viewrow = 1
+            } else {
+                viewrow = Math.floor(viewdiv / 10)
+                viewrow = +viewrow + 1
+            }
+            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
+            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("saveNremark");
             viewdiv = +viewdiv + 1
             showdiv()
         } else {
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("bg-deepyellow");
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("bg-purple");
+            if (viewdiv < 10) {
+                viewrow = 1
+            } else {
+                viewrow = Math.floor(viewdiv / 10)
+                viewrow = +viewrow + 1
+            }
+            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
+            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("remark");
             viewdiv = +viewdiv + 1
             showdiv()
         }
@@ -87,16 +114,25 @@ $(function () {
     // subject selection buttons 
     $(".phybtn").click(function (e) {
         e.preventDefault();
+        $(this).addClass("active")
+        $(".chembtn").removeClass("active");
+        $(".mathsbtn").removeClass("active");
         viewdiv = 1
         showdiv()
     });
     $(".chembtn").click(function (e) {
         e.preventDefault();
+        $(this).addClass("active")
+        $(".phybtn").removeClass("active");
+        $(".mathsbtn").removeClass("active");
         viewdiv = 31
         showdiv()
     });
     $(".mathsbtn").click(function (e) {
         e.preventDefault();
+        $(this).addClass("active")
+        $(".phybtn").removeClass("active");
+        $(".chembtn").removeClass("active");
         viewdiv = 61
         showdiv()
     });
@@ -104,8 +140,15 @@ $(function () {
     $(".saveAnsbtn").click(function (e) {
         e.preventDefault();
         if ($(".question:nth-child(" + viewdiv + ") table tbody td input").is(":checked")) {
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("bg-deepyellow");
-            $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("bg-success text-light");
+            if (viewdiv < 10) {
+                viewrow = 1
+            } else {
+                viewrow = Math.floor(viewdiv / 10)
+                viewrow = +viewrow + 1
+            }
+            viewqueNo = (viewdiv % 10)
+            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
+            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("answered text-light");
             viewdiv = +viewdiv + 1
             showdiv()
         } else {
@@ -125,8 +168,15 @@ $(function () {
         if ($(".question:nth-child(" + viewdiv + ") input").is(":checked")) {
             $(".question:nth-child(" + viewdiv + ") input").prop("checked", false);
         }
-        $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("bg-greenblue bg-purple bg-success text-light")
-        $(".queNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("bg-deepyellow")
+        if (viewdiv < 10) {
+            viewrow = 1
+        } else {
+            viewrow = Math.floor(viewdiv / 10)
+            viewrow = +viewrow + 1
+        }
+        viewqueNo = (viewdiv % 10)
+        $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("saveNremark remark answered text-light")
+        $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("visited")
     });
 
     // review button to mark question
@@ -151,8 +201,8 @@ $(function () {
     $(".quebtn").click(function (e) {
         e.preventDefault();
         viewdiv = $(this).attr("data-div");
-        if (!$(this).hasClass("bg-success")) {
-            $(this).addClass("bg-deepyellow")
+        if (!$(this).hasClass("answered")) {
+            $(this).addClass("visited")
             // alert(viewdiv)
         }
         $(".question").css("display", "none");
