@@ -4,7 +4,7 @@
 }
 .logo{
     /* border: 1px solid red; */
-    width: 20%;
+    width: 12%;
     float: left;
 }
 .logo img{
@@ -244,6 +244,7 @@ img{
         margin-left: 1%;
         margin-bottom: 1%;
     }
+    
 }
 
 
