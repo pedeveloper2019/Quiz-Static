@@ -8,6 +8,18 @@ $(function () {
         $(".topBar").toggleClass("d-None");
         $(".thinBar").toggleClass("d-inlineBlock")
     });
+    width = $(window).width();
+    if (width < 990) {
+        $(".MainColumn").append(` <div class="d-flex">
+        <div class="btn answered">0</div>
+        <div class="btn d-inline">Answered</div>
+    </div>
+    <div class="d-flex">
+        <div class="btn remark" style="height: 35px;">0</div>
+        <div class="btn d-inline">Marked for Review</div>
+    </div>`);
+
+    }
     viewdiv = 1
     viewrow = 1
 
@@ -75,13 +87,12 @@ $(function () {
         // alert(viewrow)
         $(".question").css("display", "none");
         $(".question:nth-child(" + viewdiv + ")").css("display", "block");
-        if ( !$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("answered")) 
-        {
-           if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("saveNremark")) {
-               if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("remark")) {
-                $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("visited");
-               }
-           }
+        if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("answered")) {
+            if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("saveNremark")) {
+                if (!$(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("remark")) {
+                    $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("visited");
+                }
+            }
         }
     }
 
@@ -93,8 +104,8 @@ $(function () {
                 viewrow = Math.floor(viewdiv / 10)
                 viewrow = +viewrow + 1
             }
-            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
-            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("saveNremark");
+            $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
+            $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("saveNremark");
             viewdiv = +viewdiv + 1
             showdiv()
         } else {
@@ -104,8 +115,8 @@ $(function () {
                 viewrow = Math.floor(viewdiv / 10)
                 viewrow = +viewrow + 1
             }
-            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
-            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("remark");
+            $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
+            $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("remark");
             viewdiv = +viewdiv + 1
             showdiv()
         }
@@ -147,8 +158,8 @@ $(function () {
                 viewrow = +viewrow + 1
             }
             viewqueNo = (viewdiv % 10)
-            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
-            $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("answered text-light");
+            $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
+            $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("answered text-light");
             viewdiv = +viewdiv + 1
             showdiv()
         } else {
@@ -175,8 +186,8 @@ $(function () {
             viewrow = +viewrow + 1
         }
         viewqueNo = (viewdiv % 10)
-        $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").removeClass("saveNremark remark answered text-light")
-        $(".queNo tbody tr:nth-child("+ viewrow+") td.btn:nth-child(" + viewqueNo + ")").addClass("visited")
+        $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("saveNremark remark answered text-light")
+        $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("visited")
     });
 
     // review button to mark question

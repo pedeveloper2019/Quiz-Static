@@ -56,9 +56,9 @@
             <span class="mr-3 text-light" style="font-size: 2vw;"><b>JEE-Main</b></span>
         </div>
         <div class="d-flex align-self-center subjectbtns">
-                <a class="btn btn-primary mr-1 phybtn active"><b>Physics</b></a>
-                <a class="btn btn-primary mr-1 chembtn"><b>Chemistry</b></a>
-                <a class="btn btn-primary mr-1 mathsbtn"><b>Mathematics</b></a>
+            <a class="btn btn-primary mr-1 phybtn active"><b>Physics</b></a>
+            <a class="btn btn-primary mr-1 chembtn"><b>Chemistry</b></a>
+            <a class="btn btn-primary mr-1 mathsbtn"><b>Mathematics</b></a>
         </div>
         <div class="d-flex mr-4 align-items-center">
             <span class="text-right text-light mr-2">Paper Language</span>
@@ -92,9 +92,8 @@
                         </button>
                         <button class="btn btn-primary reviewbtn"><b>Mark For Review & Next</b></button>
                         <button class="btn backbtn mt-3">
-                            <b><< Back</b> 
-                        </button> 
-                        <button class="btn nextbtn mt-3"><b>Next >></b></button>
+                            <b>
+                                << Back</b> </button> <button class="btn nextbtn mt-3"><b>Next >></b></button>
                         <button class="btn btn-success submit ml-auto mt-3 mr-3"><b>Submit Test</b></button>
                         <!-- <a href="#"  style="">
                             <b>Submit Test</b>
@@ -216,12 +215,45 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="card pl-4 m-0 mt-1" style="border:none;">
-                        <div class="card-body p-0 legend text-center">
+                    <div class="d-flex mt-2 justify-content-center legend">
+                        <div class="d-flex flex-column justify-content-center MainColumn">
+                            <div class="d-flex">
+                                <div class="btn"
+                                    style="background-image: url(assets/images/Logo1.png);background-size: 102% 101%;width: 35px">
+                                    90</div>
+                                <div class="btn d-inline mr-3"> Not Visited</div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="btn visited">1</div>
+                                <div class="btn d-inline">Not Answered &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between hideInTablet">
+                            <div class="d-flex">
+                                <div class="btn answered">0</div>
+                                <div class="btn d-inline">Answered</div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="btn remark" style="height: 35px;">0</div>
+                                <div class="btn d-inline">Marked for Review</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="d-flex flex-row align-items-center justify-content-center legend">
+                            <span class="btn saveNremark mb-2" style="height:35px;">0</span>
+                            <span class="btn d-inline">
+                                Answered &
+                                Marked for Review <br> (will be considered for evaluation)
+                            </span>
+                        </div>
+                    <!-- <div class="card pl-4 m-0 mt-1" style="border:none;">
+                        <div class="card-body p-0 legend">
                             <div>
                                 <div class="row w-100">
                                     <div class="col-md-5 p-0">
-                                        <div class="btn" style="background-image: url(assets/images/Logo1.png);background-size: 102% 101%;width: 35px">90</div>
+                                        <div class="btn"
+                                            style="background-image: url(assets/images/Logo1.png);background-size: 102% 101%;width: 35px">
+                                            90</div>
                                         <div class="btn d-inline"> Not Visited</div>
                                     </div>
                                     <div class="col-md-7 p-0">
@@ -240,15 +272,11 @@
                                     </div>
                                 </div>
                                 <div class="row mt-2">
-                                    <span class="btn saveNremark mb-2 ml-3" style="height:35px;">0</span>
-                                    <span class="btn d-inline">
-                                        Answered &
-                                        Marked for Review <br> (will be considered for evaluation)
-                                    </span>
+
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
