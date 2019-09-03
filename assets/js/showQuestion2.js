@@ -19,19 +19,6 @@ $(function () {
             $(".rightSide").toggleClass("sideLength");
         });
     }
-    $(".radio-btn").click(function (e) {
-        e.preventDefault();
-        // alert()
-        if (!$(".radio-btn").hasClass("bg-radio-btn")) {
-            $(this).children("input").attr('checked', true)
-            $(this).toggleClass("bg-radio-btn");
-        } else {
-            $(".radio-btn input").attr('checked', false)
-            $(".radio-btn ").removeClass("bg-radio-btn")
-            $(this).children("input").attr('checked', true)
-            $(this).toggleClass("bg-radio-btn");
-        }
-    });
 
     // Exam Logic
     viewdiv = 1
@@ -104,6 +91,19 @@ $(function () {
         }
     }
 
+    $(".radio-btn").click(function (e) {
+        e.preventDefault();
+        // alert()
+        if (!$(".radio-btn").hasClass("bg-radio-btn")) {
+            $(this).children("input").attr('checked', true)
+            $(this).toggleClass("bg-radio-btn");
+        } else {
+            $(".radio-btn input").attr('checked', false)
+            $(".radio-btn ").removeClass("bg-radio-btn")
+            $(this).children("input").attr('checked', true)
+            $(this).toggleClass("bg-radio-btn");
+        }
+    });
     function createQNo() {
         for (let index = 1; index <= 90; index++) {
             if (index <= 9) {
