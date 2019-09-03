@@ -3,12 +3,35 @@ $(function () {
     // Page Logic
     height = $(".header").height();
     $(".mainContainer").css("top", height);
-    $(".slider").click(function (e) { 
+    Width = $(window).width();
+    if(Width >900){
+        $(".slider").click(function (e) {
+            e.preventDefault();
+            // alert()
+            $(".rightSide").toggleClass("sideLength1");
+            $(".leftSide").toggleClass("col-xl-11")
+        });
+    }
+    else{
+        $(".slider").click(function (e) {
+            e.preventDefault();
+            // alert()
+            $(".rightSide").toggleClass("sideLength");
+        });
+    }
+    $(".radio-btn").click(function (e) {
         e.preventDefault();
         // alert()
-        $(".rightSide").toggleClass("sideLength");
+        if (!$(".radio-btn").hasClass("bg-radio-btn")) {
+            $(this).children("input").attr('checked', true)
+            $(this).toggleClass("bg-radio-btn");
+        } else {
+            $(".radio-btn input").attr('checked', false)
+            $(".radio-btn ").removeClass("bg-radio-btn")
+            $(this).children("input").attr('checked', true)
+            $(this).toggleClass("bg-radio-btn");
+        }
     });
-    
 
     // Exam Logic
     viewdiv = 1
@@ -32,36 +55,48 @@ $(function () {
         if (displayedMin <= 9) displayedMin = "0" + displayedMin;
         if (displayedSecs <= 9) displayedSecs = "0" + displayedSecs;
         currentSecs--;
-        $(".remainCounter").html("["+displayedHrs + ":" + displayedMin + ":" +
-            displayedSecs+"]");
+        $(".remainCounter").html("[" + displayedHrs + ":" + displayedMin + ":" +
+            displayedSecs + "]");
         if (currentSecs !== -1) setTimeout(decrement, 1000);
     }
 
-    function createDivs(){
-        for(let index = 1; index <= 90; index++) {
+    function createDivs() {
+        for (let index = 1; index <= 90; index++) {
             $(".Questions").append(`<div class="Question">
             <div class="row ml-1 pb-2 w-100" style="border-bottom: 1px solid #25b5e9;color: #333;">
-                <div class="w-50 font-weight-bold">Question No: `+index+`</div>
+                <div class="w-50 font-weight-bold">Question No: ` + index + `</div>
                 <div class="w-50 text-right font-weight-bold">Single Choice Type Question</div>
             </div>
             <div class="row w-100 ml-1">
-                <img class="QuestionImg" src="assets/images/questions/`+index+`.png" alt="">
+                <img class="QuestionImg" src="assets/images/questions/` + index + `.png" alt="">
                 <table class="table table-borderless mt-2">
                     <tbody>
-                        <tr>
-                            <td> 1 ) <input type="radio" value="1" name="Question`+index+`" id="rOption1_1">
-
-                            </td>
-                            <td> 2 ) <input type="radio" value="2" name="Question`+index+`" id="rOption1_1">
-
-                            </td>
-                            <td> 3 ) <input type="radio" value="3" name="Question`+index+`" id="rOption1_1">
-
-                            </td>
-                            <td> 4 ) <input type="radio" value="4" name="Question`+index+`" id="rOption1_1">
-
-                            </td>
-                        </tr>
+                    <tr>
+                    <td>
+                        <label class="radio-btn">
+                            <input type="radio" value="1" name="Question` + index + `" class="">
+                            A
+                        </label>
+                    </td>
+                    <td>
+                        <label class="radio-btn">
+                            <input type="radio" value="2" name="Question` + index + `" class="">
+                            B
+                        </label>
+                    </td>
+                    <td>
+                        <label class="radio-btn">
+                            <input type="radio" value="3" name="Question` + index + `" class="">
+                            C
+                        </label>
+                    </td>
+                    <td>
+                        <label class="radio-btn">
+                            <input type="radio" value="4" name="Question` + index + `" class="">
+                            D
+                        </label>
+                    </td>
+                </tr>
                     </tbody>
                 </table>
             </div>
@@ -70,12 +105,11 @@ $(function () {
     }
 
     function createQNo() {
-        for(let index = 1; index <= 90; index++) {
-            if(index<=9)
-            {
-                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="`+index+`">&nbsp;`+index+`</td>`);
-            }else{
-                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="`+index+`">`+index+`</td>`);
+        for (let index = 1; index <= 90; index++) {
+            if (index <= 9) {
+                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="` + index + `">&nbsp;` + index + `</td>`);
+            } else {
+                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="` + index + `">` + index + `</td>`);
             }
         }
     }
@@ -85,7 +119,7 @@ $(function () {
         $(".Question:nth-child(" + viewdiv + ")").css("display", "block");
         if (!$(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("attempted") ||
             !$(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("review") || !$(".queNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("Ansreview")) {
-                // alert()
+            // alert()
             $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("unattempted");
         }
     }
@@ -158,7 +192,7 @@ $(function () {
     $(".Quebtn").click(function (e) {
         e.preventDefault();
         viewdiv = $(this).attr("data-div");
-        if (!$(this).hasClass("attempted")&&!$(this).hasClass("review")&&!$(this).hasClass("Ansreview")) {
+        if (!$(this).hasClass("attempted") && !$(this).hasClass("review") && !$(this).hasClass("Ansreview")) {
             $(this).addClass("unattempted")
             // alert(viewdiv)
         }

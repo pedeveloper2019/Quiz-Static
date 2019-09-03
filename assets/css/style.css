@@ -257,7 +257,13 @@ img{
     /* border: 1px solid red; */
 }
 .slider{
+    /* display: none; */
+    cursor: pointer;
+}
+.sideLength1{
     display: none;
+    right:0px;
+    top: 0px;
 }
 .leftSide{
     height: 91vh;
@@ -545,6 +551,8 @@ img{
     height: 73vh;overflow: auto;
     border-bottom: 1px solid #ccc;
 }
+
+
 @media (min-width:470px) and (max-width:900px){
     .slider{
         display: inline;
@@ -561,6 +569,11 @@ img{
     .leftSide{
         width: 99vw !important;
     }
+    .sideLength{
+        display: block;
+        bottom: 0px;
+        right: 0px;
+    }
     .Qfooter{
         padding-top: 2vh;
     }
@@ -570,11 +583,6 @@ img{
     .btnrow2 .btn{
         width: 25vw;
         font-size: 2vw;
-    }
-    .sideLength{
-        display: block;
-        right:0px;
-        top: 0px;
     }
     .QueNo td.unseen{
         width: 10%;
