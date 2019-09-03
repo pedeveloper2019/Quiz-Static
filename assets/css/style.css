@@ -252,6 +252,9 @@ img{
 
 
 /* ========================= Test2 Style ========================== */
+.flex-1{
+    flex: 1 !important;
+}
 .header{
     height: 7.5vh;position: fixed;
     /* border: 1px solid red; */
@@ -557,11 +560,11 @@ img{
     .slider{
         display: inline;
         cursor: pointer;
-        padding-top: 2vw !important;
+        /* padding-top: 2vw !important; */
     }
-    .Time{
-        padding-top: 2vw !important;
-    }
+    /* .Time{
+         padding-top: 2vw !important; 
+    } */
     .rightSide{
         display:none; 
         width: 50vw;
@@ -807,10 +810,10 @@ img{
     }
     .Time{
         font-size: 3vw;
-        padding-top: 4vw !important;
+        /* padding-top: 4vw !important; */
     }
     .header img{
-        height: 12vw;
+        height: 5vw;
     }
     .rightSide{
         display:none; 
