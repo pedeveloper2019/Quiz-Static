@@ -588,22 +588,22 @@ img{
         font-size: 2vw;
     }
     .QueNo td.unseen{
-        width: 10%;
-        height: 8%;
+        width: 8%;
+        height: 7.5%;
         vertical-align: middle;
         padding-top: 1vw;
         font-size: 1.5vw;
         margin-left: .6vw;
-        margin-top: 1.5vw;
+        margin-top: 2.5vw;
     }
     .QueNo td.attempted{
-        width: 10%;
-        height: 8%;
+        width: 8%;
+        height: 7.5%;
         vertical-align: middle;
         padding-top: 1vw;
         font-size: 1.5vw;
         margin-left: .6vw;
-        margin-top: 1.5vw;
+        margin-top: 2.5vw;
         border: none !important;
         background-color: #29B999;
         font-weight: bold;
@@ -614,8 +614,8 @@ img{
     .QueNo td.attempted::before{
         width: 0;
         height: 0;
-        border-left: 2.2vw solid transparent;
-        border-right: 2.2vw solid transparent;
+        border-left: 1.8vw solid transparent;
+        border-right: 1.8vw solid transparent;
         border-bottom: 8px solid #29B999;
         content: "";
         position: absolute;
@@ -623,14 +623,14 @@ img{
         left: 0;
     }
     .QueNo td.unattempted{
-        width: 10%;
-        height: 8%;
+        width: 8%;
+        height: 7.5%;
         padding: 0px;
         vertical-align: middle;
         padding-top: 1vw;
         font-size: 1.5vw;
         margin-left: .6vw;
-        margin-top: 1.5vw;
+        margin-top: 2.5vw;
         border: none !important;
         background-color: #ED6060;
         color: #FFFFFF;
@@ -641,8 +641,8 @@ img{
     .QueNo td.unattempted::after{
         width: 0;
         height: 0;
-        border-left: 2.3vw solid transparent;
-        border-right: 2.3vw solid transparent;
+        border-left: 1.8vw solid transparent;
+        border-right: 1.8vw solid transparent;
         border-top: 8px solid #ED6060;
         content: "";
         position: absolute;
@@ -651,15 +651,15 @@ img{
     }
     .QueNo td.review{
         border: 1px solid #ccc;
-        width: 10%;
-        height: 8%;
+        width: 8%;
+        height: 7.5%;
         padding: 0px;
         vertical-align: middle;
         padding-top: 1vw;
         padding-left: .5vw;
         font-size: 1.5vw;
         margin-left: .6vw;
-        margin-top: 1.5vw;
+        margin-top: 2.5vw;
         font-weight: bold;
         color: white;
         background: #565FB8;
@@ -669,15 +669,15 @@ img{
     }
     .QueNo td.Ansreview{
         border: 1px solid #ccc;
-        width: 10%;
-        height: 8%;
+        width: 8%;
+        height: 7.5%;
         padding: 0px;
         vertical-align: middle;
         padding-top: 1vw;
         padding-left: 2vw;
         font-size: 1.5vw;
         margin-left: .6vw;
-        margin-top: 1.5vw;
+        margin-top: 2.5vw;
         font-weight: bold;
         color: white;
         background: #565FB8;
