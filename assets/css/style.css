@@ -343,7 +343,7 @@ img{
     background: #ccc;
     border-radius: 50%;
     text-align: center;
-    text-indent: -2px;
+    /* text-indent: 2px; */
 }
 .QueNo td.attempted{
     width: 8%;
@@ -379,7 +379,7 @@ img{
     vertical-align: middle;
     /* padding-top: .2vw; */
     font-size: 1vw;
-    margin-left: .3vw;
+    /* margin-left: .3vw; */
     margin-top: 1.5vw;
     border: none !important;
     background-color: #ED6060;

@@ -44,13 +44,15 @@ $(function () {
             $(this).toggleClass("bg-radio-btn");
         }
     });
-    $(".radio-btn").css("transition", "transform 500ms ease-in-out");
+    $(".radio-btn").css("transition", "transform .3s ease-in-out");
 
     $(".radio-btn").hover(    
         // Handler for mouseenter
         function()
         {
             $(this).css("transform", "scale(1.2)");
+            $(this).css("background-position", "right center");
+            
         },
         // Handler for mouseleave
         function()
