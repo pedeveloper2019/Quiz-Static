@@ -21,17 +21,18 @@
     <div class="d-flex align-items-center bg-dark p-1">
         <div class="d-flex ml-2 logo">
             <a href="index.html">
-                <img src="/assets/images/photon logo.png" alt="Quiz logo" class="w-100">
+                <img src="assets/images/photon logo.png" alt="Quiz logo" class="w-100">
             </a>
         </div>
         <div class="d-flex align-self-center thinBar text-light ml-auto mr-auto">
-            <a class="btn btn-primary mr-1 mt-1 mb-1 phybtn"><b>Physics</b></a>
+            <a class="btn btn-primary ml-3 mr-1 mt-1 mb-1 phybtn"><b>Physics</b></a>
             <a class="btn btn-primary mr-1 mt-1 mb-1 chembtn"><b>Chemistry</b></a>
             <a class="btn btn-primary mr-1 mt-1 mb-1 mathsbtn"><b>Mathematics</b></a>
         </div>
         <div class="d-flex thinBar">
             <span class="btn btn-dark mt-1 mb-1">Candidate Name <span>: [Your Name]</span></span>
-            <span class="btn btn-dark mt-1 mb-1"> Remaining Time <span class="remainCounter">[00:00:00]</span>
+            <span class="btn btn-dark mt-1 mb-1 mr-3"> Remaining Time 
+                <span class="remainCounter">[00:00:00]</span>
             </span>
         </div>
         <div class="d-flex p-2 align-self-center ml-auto topVertical" style="border: 3px solid white;">
@@ -52,7 +53,7 @@
         </div>
     </div>
     <div class="p-1 d-flex justify-content-between bg-deepyellow topBar">
-        <div class="d-flex w-25 ml-3">
+        <div class="d-flex ml-3">
             <span class="mr-3 text-light" style="font-size: 2vw;"><b>JEE-Main</b></span>
         </div>
         <div class="d-flex align-self-center subjectbtns">
@@ -82,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-2 mt-4 pr-4 btnrow fixedbtns w-100">
+                    <div class="row mb-2 mt-4 btnrow w-100 d-flex justify-content-center">
                         <button class="btn btn-success saveAnsbtn"><b>Save & Next</b></button>
                         <button class="btn bg-deepyellow text-light saveAnsReview"><b>Save & Mark For
                                 Review</b>
@@ -91,17 +92,16 @@
                                 Response</b>
                         </button>
                         <button class="btn btn-primary reviewbtn"><b>Mark For Review & Next</b></button>
+                    </div>
+                    <div class="row d-flex btnrow w-100 justify-content-center" style="left:0;">
                         <button class="btn backbtn mt-3">
-                            <b>
-                                << Back</b> </button> <button class="btn nextbtn mt-3"><b>Next >></b></button>
-                        <button class="btn btn-success submit ml-auto mt-3 mr-3"><b>Submit Test</b></button>
-                        <!-- <a href="#"  style="">
-                            <b>Submit Test</b>
-                        </a> -->
+                            <b>&lt;&lt; Back</b> 
+                        </button>
+                        <button class="btn nextbtn mt-3"><b>Next >></b></button>
                     </div>
                 </div>
                 <div class="col-lg-4 p-0 Qselect">
-                    <div class="questionNo row m-0 pl-2 pr-1" style="overflow: auto;height: 73%;">
+                    <div class="questionNo row m-0 pl-2 pr-1" style="overflow: auto;height: 67%;">
                         <table class="queNo h-50 w-100 text-center">
                             <tbody>
                                 <tr>
@@ -240,12 +240,15 @@
                         </div>
                     </div>
                      <div class="d-flex flex-row align-items-center justify-content-center legend">
-                            <span class="btn saveNremark mb-2" style="height:35px;">0</span>
-                            <span class="btn d-inline">
-                                Answered &
-                                Marked for Review <br> (will be considered for evaluation)
-                            </span>
-                        </div>
+                        <span class="btn saveNremark mb-2" style="height:35px;">0</span>
+                        <span class="btn d-inline">
+                            Answered &
+                            Marked for Review <br> (will be considered for evaluation)
+                        </span>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success submit pt-0 pb-0 mb-0"><b>Submit Test</b></button>
+                    </div>
                     <!-- <div class="card pl-4 m-0 mt-1" style="border:none;">
                         <div class="card-body p-0 legend">
                             <div>

@@ -1,25 +1,5 @@
 $(function () {
     // alert("I'm ready")
-    // Page Logic
-    height = $(".header").height();
-    $(".mainContainer").css("top", height);
-    Width = $(window).width();
-    if(Width >900){
-        $(".slider").click(function (e) {
-            e.preventDefault();
-            // alert()
-            $(".rightSide").toggleClass("sideLength1");
-            $(".leftSide").toggleClass("col-xl-11")
-        });
-    }
-    else{
-        $(".slider").click(function (e) {
-            e.preventDefault();
-            // alert()
-            $(".rightSide").toggleClass("sideLength");
-        });
-    }
-
     // Exam Logic
     viewdiv = 1
     answers = {
@@ -30,6 +10,56 @@ $(function () {
     createDivs()
     createQNo()
     showdiv()
+
+    // Page Logic
+    height = $(".header").height();
+    $(".mainContainer").css("top", height);
+    Width = $(window).width();
+    if(Width >900){
+        $(".slider").click(function (e) {
+            e.preventDefault();
+            // alert()
+            $(".rightSide").toggleClass("sideLength1");
+            $(".leftSide").toggleClass("col-xl-12")
+        });
+    }
+    else{
+        $(".slider").click(function (e) {
+            e.preventDefault();
+            // alert()
+            $(".rightSide").toggleClass("sideLength");
+        });
+    }
+    
+    $(".radio-btn").click(function (e) {
+        e.preventDefault();
+        // alert()
+        if (!$(".radio-btn").hasClass("bg-radio-btn")) {
+            $(this).children("input").attr('checked', true)
+            $(this).toggleClass("bg-radio-btn");
+        } else {
+            $(".radio-btn input").attr('checked', false)
+            $(".radio-btn ").removeClass("bg-radio-btn")
+            $(this).children("input").attr('checked', true)
+            $(this).toggleClass("bg-radio-btn");
+        }
+    });
+    $(".radio-btn").css("transition", "transform 500ms ease-in-out");
+
+    $(".radio-btn").hover(    
+        // Handler for mouseenter
+        function()
+        {
+            $(this).css("transform", "scale(1.2)");
+        },
+        // Handler for mouseleave
+        function()
+        {
+            $(this).css("transform", "scale(1)");
+        }
+    );
+    
+
     // Counter
     var initialSecs = 10800;
     var currentSecs = initialSecs;
@@ -58,29 +88,29 @@ $(function () {
                 <img class="QuestionImg" src="assets/images/questions/` + index + `.png" alt="">
                 <table class="table table-borderless mt-2">
                     <tbody>
-                    <tr>
-                    <td>
+                    <tr class="d-flex justify-content-center">
+                    <td class="d-flex flex-1 justify-content-center align-items-center">
                         <label class="radio-btn">
                             <input type="radio" value="1" name="Question` + index + `" class="">
-                            A
+                            Option 1
                         </label>
                     </td>
-                    <td>
+                    <td class="d-flex flex-1 justify-content-center align-items-center">
                         <label class="radio-btn">
                             <input type="radio" value="2" name="Question` + index + `" class="">
-                            B
+                            Option 2
                         </label>
                     </td>
-                    <td>
+                    <td class="d-flex flex-1 justify-content-center align-items-center">
                         <label class="radio-btn">
                             <input type="radio" value="3" name="Question` + index + `" class="">
-                            C
+                            Option 3
                         </label>
                     </td>
-                    <td>
+                    <td class="d-flex flex-1 justify-content-center align-items-center">
                         <label class="radio-btn">
                             <input type="radio" value="4" name="Question` + index + `" class="">
-                            D
+                            Option 4
                         </label>
                     </td>
                 </tr>
@@ -91,19 +121,6 @@ $(function () {
         }
     }
 
-    $(".radio-btn").click(function (e) {
-        e.preventDefault();
-        // alert()
-        if (!$(".radio-btn").hasClass("bg-radio-btn")) {
-            $(this).children("input").attr('checked', true)
-            $(this).toggleClass("bg-radio-btn");
-        } else {
-            $(".radio-btn input").attr('checked', false)
-            $(".radio-btn ").removeClass("bg-radio-btn")
-            $(this).children("input").attr('checked', true)
-            $(this).toggleClass("bg-radio-btn");
-        }
-    });
     function createQNo() {
         for (let index = 1; index <= 90; index++) {
             if (index <= 9) {
