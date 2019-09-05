@@ -49,6 +49,7 @@ img{
     width: 2.9vw;
     height: 33px;
     padding: 0;
+    padding-top: .4vh;
     margin-left: .2vw;
     margin-top: .4vw;
     border-radius: 20%;
@@ -168,8 +169,8 @@ img{
 .questionNo::-webkit-scrollbar-track,.questionsCard::-webkit-scrollbar-track
 {
     border-radius: 10px;
-    box-shadow: inset 0 0 2px #455A64;
-	-webkit-box-shadow: inset 0 0 2px #455A64;
+    box-shadow: inset 0 0 2px #ccc;
+	-webkit-box-shadow: inset 0 0 2px #ccc;
 	background-color: #F5F5F5;
 }
 
@@ -181,7 +182,7 @@ img{
 
 .questionNo::-webkit-scrollbar-thumb,.questionsCard::-webkit-scrollbar-thumb
 {
-    background-color: #455A64;
+    background-color: #ccc;
     border-radius: 10px;
 }
 .hider i{
@@ -249,6 +250,11 @@ img{
     }
     
 }
+@media (max-width: 650px){
+    .langSelect{
+        display: none !important;
+    }
+}
 
 
 /* ========================= Test2 Style ========================== */
@@ -256,7 +262,7 @@ img{
     flex: 1 !important;
 }
 .header{
-    height: 7.5vh;position: fixed;
+    height: 8%;position: fixed;
     /* border: 1px solid red; */
 }
 .slider{
@@ -269,18 +275,22 @@ img{
     top: 0px;
 }
 .leftSide{
-    height: 91vh;
+    height: 90%;
+    /* border: 1px solid red; */
     position: absolute;
     left:0px;
     bottom: 0px;
     top:1vh;
 }
 .rightSide{
-    background: #f5f5f5;height: 90vh;
+    background: #f5f5f5;
     position: absolute;
+    /* border: 1px solid red; */
     right: 0px;
     top: 1vh;
-    bottom: 0px;width: 24vw;
+    bottom: 0px;width: 100%;
+    height: 90%;
+    /* overflow: auto !important; */
 }
 .btnrow2 .btn{
     border: 1px solid #25b5e9;
@@ -309,8 +319,8 @@ img{
 .QuestionNo::-webkit-scrollbar-track,.Qwrapper::-webkit-scrollbar-track
 {
     border-radius: 10px;
-    box-shadow: inset 0 0 2px #455A64;
-	-webkit-box-shadow: inset 0 0 2px #455A64;
+    box-shadow: inset 0 0 2px #ccc;
+	-webkit-box-shadow: inset 0 0 2px #ccc;
 	background-color: #F5F5F5;
 }
 
@@ -325,16 +335,21 @@ img{
     background-color: #ccc;
     border-radius: 10px;
 }
+
+.QueNo{
+    border-collapse: separate;
+    border-spacing: 0 1vh;
+}
 .QueNo td{
     text-align: center !important;
 }
 .QueNo td.unseen{
     border: 1px solid #ccc;
-    width: 8%;
-    height: 6.5%;
+    width: 9%;
+    height: 80%;
     padding: 0px;
     vertical-align: middle;
-    /* padding-top: .2vw; */
+    padding-top: .6vw;
     font-size: 1vw;
     margin-left: .3vw;
     margin-top: 1.3vw;
@@ -346,11 +361,11 @@ img{
     /* text-indent: 2px; */
 }
 .QueNo td.attempted{
-    width: 8%;
-    height: 6.5%;
+    width: 9%;
+    height: 80%;
     padding: 0px;
     vertical-align: middle;
-    /* padding-top: .2vw; */
+    padding-top: .6vw;
     font-size: 1vw;
     margin-left: .3vw;
     margin-top: 1.5vw;
@@ -364,8 +379,8 @@ img{
 .QueNo td.attempted::before{
     width: 0;
     height: 0;
-    border-left: .87vw solid transparent;
-    border-right: .87vw solid transparent;
+    border-left: 1.4vw solid transparent;
+    border-right: 1.4vw solid transparent;
     border-bottom: 8px solid #29B999;
     content: "";
     position: absolute;
@@ -373,14 +388,12 @@ img{
     left: 0;
 }
 .QueNo td.unattempted{
-    width: 8%;
-    height: 6.5%;
+    width: 9%;
+    height: 80%;
     padding: 0px;
     vertical-align: middle;
-    /* padding-top: .2vw; */
+    padding-top: .6vw;
     font-size: 1vw;
-    /* margin-left: .3vw; */
-    margin-top: 1.5vw;
     border: none !important;
     background-color: #ED6060;
     color: #FFFFFF;
@@ -391,8 +404,8 @@ img{
 .QueNo td.unattempted::after{
     width: 0;
     height: 0;
-    border-left: .87vw solid transparent;
-    border-right: .87vw solid transparent;
+    border-left: 1.4vw solid transparent;
+    border-right: 1.4vw solid transparent;
     border-top: 8px solid #ED6060;
     content: "";
     position: absolute;
@@ -401,11 +414,11 @@ img{
 }
 .QueNo td.review{
     border: 1px solid #ccc;
-    width: 8%;
-    height: 6.5%;
+    /* width: 9%; */
+    height: 80%;
     padding: 0px;
     vertical-align: middle;
-    /* padding-top: .2vw; */
+    padding-top: .5vw;
     font-size: 1vw;
     margin-left: .3vw;
     margin-top: 1.5vw;
@@ -418,12 +431,11 @@ img{
 }
 .QueNo td.Ansreview{
     border: 1px solid #ccc;
-    width: 8%;
-    height: 6.5%;
+    /* width: 7%; */
+    height: 80%;
     padding: 0px;
     vertical-align: middle;
-    /* padding-top: .2vw; */
-    padding-left: .4vw;
+    padding-top: .5vw;
     font-size: 1vw;
     margin-left: .3vw;
     margin-top: 1.5vw;
@@ -432,26 +444,31 @@ img{
     background: #565FB8;
     border-radius: 50%;
     text-align: center;
-    text-indent: -1px;
+    text-indent: .7vw;
+}
+.QueNo tr:nth-child(1) td.Ansreview{
+    text-indent: 1.1vw;
 }
 .QueNo td.Ansreview::after{
     content: '\2713';
     position: relative;
-    top: .5vw;
+    bottom: -1vw;
     right: .2vw;
     background-color: #86D37C;
     border-radius: 50%;
-    font-size: .45vw;
+    font-size: .7vw;
     border: 2px solid #fff;
     padding-left: .2vw;
     padding-right: .2vw;
     text-indent: 0px;
 }
-
+.QueNo tr:nth-child(1) td.Ansreview::after{
+    right:-.1vw;
+}
 .legends span.unseen{
     width: 1.8vw !important;
     height: 1.8vw !important;
-    margin-left: -2vw;
+    margin-left: -.3vw !important;
     margin-top: .6vw;
     border: none !important;
     background-color:#bbb;
@@ -459,11 +476,12 @@ img{
     color: #FFFFFF;
     border-radius: 50%;
     position: relative;
+    border: 1px solid red;
 }
 .legends span.attempted{
     width: 1.5vw;
     height: 1.5vw !important;
-    margin-left: -3.7vw;
+    /* margin-left: -3.7vw; */
     margin-top: .6vw;
     border: none !important;
     background-color: #29B999;
@@ -486,7 +504,7 @@ img{
 .legends span.unattempted{
     width:1.5vw;
     height: 1.5vw;
-    margin-left: -1vw;
+    /* margin-left: -1vw; */
     margin-top: .3vw;
     margin-bottom: .3vw;
     border: none !important;
@@ -510,7 +528,7 @@ img{
 .legends span.review{
     width: 1.8vw !important;
     height: 1.8vw !important;
-    margin-left: -.5vw;
+    margin-left: 4vw !important;
     margin-top: .6vw;
     border: none !important;
     background-color:#565FB8 ;
@@ -518,6 +536,10 @@ img{
     color: #FFFFFF;
     border-radius: 50%;
     position: relative;
+}
+.legends{
+    background: #ddd;
+    padding-top: 1vh;
 }
 .legends span{
     font-size: .9vw;
@@ -551,25 +573,25 @@ img{
     height: 7.5vh;
 }
 .Qwrapper{
-    height: 73vh;overflow: auto;
+    height: 82%;overflow: auto;
     border-bottom: 1px solid #ccc;
+    width: 100%;
+    margin-left: 0px !important;
 }
 .QuestionImg{
     margin: 0 auto;
 }
 
-@media (min-width:470px) and (max-width:900px){
+@media  (max-width:990px){
     .slider{
         display: inline;
         cursor: pointer;
         /* padding-top: 2vw !important; */
     }
-    /* .Time{
-         padding-top: 2vw !important; 
-    } */
     .rightSide{
         display:none; 
         width: 50vw;
+        bottom: 0px !important;
     }
     .leftSide{
         width: 99vw !important;
@@ -579,33 +601,49 @@ img{
         bottom: 0px;
         right: 0px;
     }
+    .Qwrapper{
+        height: 80%;
+    }
     .Qfooter{
         padding-top: 2vh;
     }
     .QuestionImg{
-        width: 75%;
+        width: 50%;
     }
     .btnrow2 .btn{
         width: 25vw;
         font-size: 2vw;
     }
+    .QueNo{
+        border-collapse: separate;
+        border-spacing: 0 2vh;
+    }
     .QueNo td.unseen{
-        width: 8%;
-        height: 7.5%;
+        border: 1px solid #ccc;
+        width: 9%;
+        height: 95%;
+        padding: 0px;
         vertical-align: middle;
-        padding-top: 1vw;
+        padding-top: .6vw;
         font-size: 1.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
+        margin-left: .3vw;
+        margin-top: 1.3vw;
+        font-weight: bold;
+        color: white;
+        background: #ccc;
+        border-radius: 50%;
+        text-align: center;
+        /* text-indent: 2px; */
     }
     .QueNo td.attempted{
-        width: 8%;
-        height: 7.5%;
+        width: 9%;
+        height: 95%;
+        padding: 0px;
         vertical-align: middle;
-        padding-top: 1vw;
+        padding-top: .6vw;
         font-size: 1.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
+        margin-left: .3vw;
+        margin-top: 1.5vw;
         border: none !important;
         background-color: #29B999;
         font-weight: bold;
@@ -616,23 +654,21 @@ img{
     .QueNo td.attempted::before{
         width: 0;
         height: 0;
-        border-left: 1.8vw solid transparent;
-        border-right: 1.8vw solid transparent;
+        border-left: 2.2vw solid transparent;
+        border-right: 2.2vw solid transparent;
         border-bottom: 8px solid #29B999;
         content: "";
         position: absolute;
-        top: -8px;
+        top:-8px;
         left: 0;
     }
     .QueNo td.unattempted{
-        width: 8%;
-        height: 7.5%;
+        width: 9%;
+        height: 95%;
         padding: 0px;
         vertical-align: middle;
-        padding-top: 1vw;
+        padding-top: .6vw;
         font-size: 1.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
         border: none !important;
         background-color: #ED6060;
         color: #FFFFFF;
@@ -643,8 +679,8 @@ img{
     .QueNo td.unattempted::after{
         width: 0;
         height: 0;
-        border-left: 1.8vw solid transparent;
-        border-right: 1.8vw solid transparent;
+        border-left: 2.2vw solid transparent;
+        border-right: 2.2vw solid transparent;
         border-top: 8px solid #ED6060;
         content: "";
         position: absolute;
@@ -653,15 +689,14 @@ img{
     }
     .QueNo td.review{
         border: 1px solid #ccc;
-        width: 8%;
-        height: 7.5%;
+        /* width: 9%; */
+        height: 80%;
         padding: 0px;
         vertical-align: middle;
-        padding-top: 1vw;
-        padding-left: .5vw;
-        font-size: 1.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
+        padding-top: .5vw;
+        font-size: 1vw;
+        margin-left: .3vw;
+        margin-top: 1.5vw;
         font-weight: bold;
         color: white;
         background: #565FB8;
@@ -671,399 +706,50 @@ img{
     }
     .QueNo td.Ansreview{
         border: 1px solid #ccc;
-        width: 8%;
-        height: 7.5%;
+        /* width: 7%; */
+        height: 80%;
         padding: 0px;
         vertical-align: middle;
-        padding-top: 1vw;
-        padding-left: 2vw;
-        font-size: 1.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
+        padding-top: .5vw;
+        font-size: 1vw;
+        margin-left: .3vw;
+        margin-top: 1.5vw;
         font-weight: bold;
         color: white;
         background: #565FB8;
         border-radius: 50%;
         text-align: center;
-        text-indent: -1px;
+        text-indent: .7vw;
+    }
+    .QueNo tr:nth-child(1) td.Ansreview{
+        text-indent: 1.1vw;
     }
     .QueNo td.Ansreview::after{
         content: '\2713';
         position: relative;
-        top: 1.5vw;
+        bottom: -1vw;
         right: .2vw;
         background-color: #86D37C;
         border-radius: 50%;
-        font-size: 1.2vw;
+        font-size: .7vw;
         border: 2px solid #fff;
         padding-left: .2vw;
-        padding-right: .3vw;
+        padding-right: .2vw;
         text-indent: 0px;
+    }
+    .QueNo tr:nth-child(1) td.Ansreview::after{
+        right:-.1vw;
     }
     
-    .legends span.unseen{
-        width: 4vw !important;
-        height: 4vw !important;
-        margin-left: -2vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color:#bbb;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 50%;
-        position: relative;
-    }
-    .legends span.attempted{
-        width: 3vw;
-        height: 3vw !important;
-        margin-left: -6vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color: #29B999;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 0;
-        position: relative;
-    }
-    .legends span.attempted::before{
-        width: 0;
-        height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-bottom: 8px solid #29B999;
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: 0;
-    }
-    .legends span.unattempted{
-        width: 3vw;
-        height: 3vw !important;
-        margin-left: 0vw;
-        margin-top: .3vw;
-        margin-bottom: .3vw;
-        border: none !important;
-        background-color: #ED6060;
-        color: #FFFFFF;
-        font-weight: bold;
-        border-radius: 0;
-        position: relative;
-    }
-    .legends span.unattempted::after{
-        width: 0;
-        height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-top: 8px solid #ED6060;
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-    }
-    .legends span.review{
-        width: 4vw !important;
-        height: 4vw !important;
-        margin-left: -.5vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color:#565FB8 ;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 50%;
-        position: relative;
-    }
-    .legends span{
-        font-size: 1.8vw;
-    }
-    .legends span.Ansreview{
-        width: 25px !important;
-        height: 25px !important;
-        margin-left: .4vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color:#565FB8 ;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 50%;
-        position: relative;
-    }
-    .legends span.Ansreview::after{
-        content: '\2713';
-        position: relative;
-        top: 3px;
-        right: 3px;
-        background-color: #86D37C;
-        border-radius: 50%;
-        font-size: 10px;
-        border: 2px solid #fff;
-        padding-left: 2px;
-        padding-right: 3px;
-        text-indent: 0px;
-    }
 }
-@media (min-width:10px) and (max-width:470px){
-    .slider{
-        display: inline;
-        cursor: pointer;
-    }
-    .header{
-        /* border:1px solid red; */
-        overflow:hidden;
-    }
-    .Time{
-        font-size: 3vw;
-        /* padding-top: 4vw !important; */
-    }
-    .header img{
-        height: 5vw;
-    }
+@media (max-width:470px){
     .rightSide{
-        display:none; 
-        width: 70vw;
-        padding: 0px !important;
-    }
-    .leftSide{
-        width: 99vw !important;
-        height: 80vh;
-        overflow: auto;
-        padding-right: 4vw !important;
-        /* border: 1px solid blue; */
-    }
-    .Qwrapper{
-        height: 68vh;
-        width: 99vw;
-        /* border: 1px solid red; */
-    }
-    .Qfooter{
-        bottom: 0px;
-        position: fixed;
-    }
-    .QuestionImg{
-        width: 75%;
-    }
-    .btnrow2 .btn{
-        width: 25vw;
-        font-size: 3vw;
-    }
-    .sideLength{
-        display: block;
-        right:0px;
-        top: 0px;
-    }
-    .QueNo td.unseen{
-        width: 10%;
-        height: 9%;
-        vertical-align: middle;
-        padding-top: 1.5vw;
-        font-size: 2.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
-    }
-    .QueNo td.attempted{
-        width: 10%;
-        height: 10%;
-        vertical-align: middle;
-        padding-top: 1.5vw;
-        font-size: 2.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
-        border: none !important;
-        background-color: #29B999;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 0;
-        position: relative;
-    }
-    .QueNo td.attempted::before{
-        width: 0;
-        height: 0;
-        border-left: 3.5vw solid transparent;
-        border-right: 3.5vw solid transparent;
-        border-bottom: 8px solid #29B999;
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: 0;
-    }
-    .QueNo td.unattempted{
-        width: 10%;
-        height: 10%;
-        padding: 0px;
-        vertical-align: middle;
-        padding-top: 1.5vw;
-        font-size: 2.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
-        border: none !important;
-        background-color: #ED6060;
-        color: #FFFFFF;
-        font-weight: bold;
-        border-radius: 0;
-        position: relative;
-    }
-    .QueNo td.unattempted::after{
-        width: 0;
-        height: 0;
-        border-left: 3.5vw solid transparent;
-        border-right: 3.5vw solid transparent;
-        border-top: 8px solid #ED6060;
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-    }
-    .QueNo td.review{
-        border: 1px solid #ccc;
-        width: 11%;
-        height: 10%;
-        padding: 0px;
-        vertical-align: middle;
-        padding-top: 1.5vw;
-        padding-left: .5vw;
-        font-size: 2.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
-        font-weight: bold;
-        color: white;
-        background: #565FB8;
-        border-radius: 50%;
-        text-align: center;
-        text-indent: -2px;
-    }
-    .QueNo td.Ansreview{
-        border: 1px solid #ccc;
-        width: 11%;
-        height: 10%;
-        padding: 0px;
-        vertical-align: middle;
-        padding-top: 2vw;
-        padding-left: 3vw;
-        font-size: 2.5vw;
-        margin-left: .6vw;
-        margin-top: 2.5vw;
-        font-weight: bold;
-        color: white;
-        background: #565FB8;
-        border-radius: 50%;
-        text-align: center;
-        text-indent: -2px;
-    }
-    .QueNo td.Ansreview::after{
-        content: '\2713';
-        position: relative;
-        top: 2vw;
-        right: -.1vw;
-        background-color: #86D37C;
-        border-radius: 50%;
-        font-size: 2vw;
-        border: 2px solid #fff;
-        padding-left: .2vw;
-        padding-right: .3vw;
-        text-indent: 0px;
-    }
-    
-    .legends span.unseen{
-        width: 4vw !important;
-        height: 5.7vw !important;
-        margin-left: -2vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color:#bbb;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 50%;
-        position: relative;
-    }
-    .legends span.attempted{
-        width: 3vw;
-        height: 4vw !important;
-        margin-left: -9vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color: #29B999;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 0;
-        position: relative;
-    }
-    .legends span.attempted::before{
-        width: 0;
-        height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-bottom: 8px solid #29B999;
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: 0;
-    }
-    .legends span.unattempted{
-        width:3vw;
-        height: 4vw;
-        margin-left: 1vw;
-        margin-top: .3vw;
-        margin-bottom: .3vw;
-        border: none !important;
-        background-color: #ED6060;
-        color: #FFFFFF;
-        font-weight: bold;
-        border-radius: 0;
-        position: relative;
-    }
-    .legends span.unattempted::after{
-        width: 0;
-        height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-top: 8px solid #ED6060;
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-    }
-    .legends span.review{
-        width: 4vw !important;
-        height: 5.7vw !important;
-        margin-left: -.5vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color:#565FB8 ;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 50%;
-        position: relative;
-    }
-    .legends span{
-        font-size: 3vw;
-    }
-    .legends span.Ansreview{
-        width: 25px !important;
-        height: 25px !important;
-        margin-left: .4vw;
-        margin-top: .6vw;
-        border: none !important;
-        background-color:#565FB8 ;
-        font-weight: bold;
-        color: #FFFFFF;
-        border-radius: 50%;
-        position: relative;
-    }
-    .legends span.Ansreview::after{
-        content: '\2713';
-        position: relative;
-        top: 3px;
-        right: 3px;
-        background-color: #86D37C;
-        border-radius: 50%;
-        font-size: 10px;
-        border: 2px solid #fff;
-        padding-left: 2px;
-        padding-right: 3px;
-        text-indent: 0px;
+        display: none;
     }
 }
 
-/* Summary Style */
+/* Summary Page Style */
+
 .topLogo img{
     width: 150px;
 }

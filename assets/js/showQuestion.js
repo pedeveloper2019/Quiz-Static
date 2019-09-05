@@ -22,7 +22,7 @@ $(function () {
     }
     viewdiv = 1
     viewrow = 1
-
+    viewqueNo = 1
     answers = {
         "Question1": "2",
         "Question2": "3",
@@ -98,22 +98,26 @@ $(function () {
 
     function saveNreview() {
         if ($(".question:nth-child(" + viewdiv + ") table tbody td input").is(":checked")) {
-            if (viewdiv < 10) {
+            if (viewdiv <= 10) {
                 viewrow = 1
+                viewqueNo = viewdiv
             } else {
                 viewrow = Math.floor(viewdiv / 10)
                 viewrow = +viewrow + 1
+                viewqueNo = (viewdiv % 10)
             }
             $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
             $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("saveNremark");
             viewdiv = +viewdiv + 1
             showdiv()
         } else {
-            if (viewdiv < 10) {
+            if (viewdiv <= 10) {
                 viewrow = 1
+                viewqueNo = viewdiv
             } else {
                 viewrow = Math.floor(viewdiv / 10)
                 viewrow = +viewrow + 1
+                viewqueNo = (viewdiv % 10)
             }
             $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
             $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("remark");
@@ -151,13 +155,14 @@ $(function () {
     $(".saveAnsbtn").click(function (e) {
         e.preventDefault();
         if ($(".question:nth-child(" + viewdiv + ") table tbody td input").is(":checked")) {
-            if (viewdiv < 10) {
+            if (viewdiv <= 10) {
                 viewrow = 1
+                viewqueNo = viewdiv
             } else {
                 viewrow = Math.floor(viewdiv / 10)
                 viewrow = +viewrow + 1
+                viewqueNo = (viewdiv % 10)
             }
-            viewqueNo = (viewdiv % 10)
             $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("visited");
             $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("answered text-light");
             viewdiv = +viewdiv + 1
@@ -179,13 +184,14 @@ $(function () {
         if ($(".question:nth-child(" + viewdiv + ") input").is(":checked")) {
             $(".question:nth-child(" + viewdiv + ") input").prop("checked", false);
         }
-        if (viewdiv < 10) {
+        if (viewdiv <= 10) {
             viewrow = 1
+            viewqueNo = viewdiv
         } else {
             viewrow = Math.floor(viewdiv / 10)
             viewrow = +viewrow + 1
+            viewqueNo = (viewdiv % 10)
         }
-        viewqueNo = (viewdiv % 10)
         $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("saveNremark remark answered text-light")
         $(".queNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("visited")
     });
@@ -199,13 +205,17 @@ $(function () {
     // back/next question buttons
     $(".nextbtn").click(function (e) {
         e.preventDefault();
-        viewdiv = +viewdiv + 1
+        if(viewdiv<=90){
+            viewdiv = +viewdiv + 1
+        }
         showdiv()
     });
 
     $(".backbtn").click(function (e) {
         e.preventDefault();
-        viewdiv = +viewdiv - 1
+        if(viewdiv>=1){
+            viewdiv = +viewdiv - 1
+        }
         showdiv()
     });
     // Question selection 

@@ -2,6 +2,8 @@ $(function () {
     // alert("I'm ready")
     // Exam Logic
     viewdiv = 1
+    viewrow = 1
+    viewqueNo = 1
     answers = {
         "Question1": "2",
         "Question2": "3",
@@ -15,7 +17,7 @@ $(function () {
     height = $(".header").height();
     $(".mainContainer").css("top", height);
     Width = $(window).width();
-    if(Width >900){
+    if (Width > 900) {
         $(".slider").click(function (e) {
             e.preventDefault();
             // alert()
@@ -23,14 +25,14 @@ $(function () {
             $(".leftSide").toggleClass("col-xl-12")
         });
     }
-    else{
+    else {
         $(".slider").click(function (e) {
             e.preventDefault();
             // alert()
             $(".rightSide").toggleClass("sideLength");
         });
     }
-    
+
     $(".radio-btn").click(function (e) {
         e.preventDefault();
         // alert()
@@ -46,21 +48,19 @@ $(function () {
     });
     $(".radio-btn").css("transition", "transform .3s ease-in-out");
 
-    $(".radio-btn").hover(    
+    $(".radio-btn").hover(
         // Handler for mouseenter
-        function()
-        {
+        function () {
             $(this).css("transform", "scale(1.2)");
             $(this).css("background-position", "right center");
-            
+
         },
         // Handler for mouseleave
-        function()
-        {
+        function () {
             $(this).css("transform", "scale(1)");
         }
     );
-    
+
 
     // Counter
     var initialSecs = 10800;
@@ -82,9 +82,9 @@ $(function () {
     function createDivs() {
         for (let index = 1; index <= 90; index++) {
             $(".Questions").append(`<div class="Question">
-            <div class="row ml-1 pb-2 w-100" style="border-bottom: 1px solid #25b5e9;color: #333;">
-                <div class="w-50 font-weight-bold">Question No: ` + index + `</div>
-                <div class="w-50 text-right font-weight-bold">Single Choice Type Question</div>
+            <div class="d-flex justify-content-between row ml-1 pb-2 w-100" style="border-bottom: 1px solid #25b5e9;color: #333;font-size:1.5vw">
+                <div class="flex-1 font-weight-bold">Question No: ` + index + `</div>
+                <div class="flex-1 text-right font-weight-bold">Single Choice Type Question</div>
             </div>
             <div class="row w-100 ml-1">
                 <img class="QuestionImg" src="assets/images/questions/` + index + `.png" alt="">
@@ -124,34 +124,61 @@ $(function () {
     }
 
     function createQNo() {
-        for (let index = 1; index <= 90; index++) {
-            if (index <= 9) {
-                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="` + index + `">&nbsp;` + index + `</td>`);
-            } else {
-                $(".QnOwrapper").append(`<td class="btn Quebtn unseen" data-div="` + index + `">` + index + `</td>`);
+        count = 1;
+        for (var i = 0; i < 9; i++) {
+            var $row = $(".QnOwrapper").append("<tr class='w-100'> < td/>").children("tr:eq(" + (i) + ")");
+            for (var k = 1; k <= 10; k++) {
+                $row.append(`<td class="btn Quebtn unseen" data-div="` + count + `">` + count + `</td>`);
+                count++;
             }
         }
     }
 
     function showdiv() {
+        if (viewdiv <= 10) {
+            viewrow = 1
+        } else {
+            viewrow = Math.floor(viewdiv / 10)
+            viewrow = +viewrow + 1
+        }
+        viewqueNo = (viewdiv % 10)
         $(".Question").css("display", "none");
         $(".Question:nth-child(" + viewdiv + ")").css("display", "block");
-        if (!$(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("attempted") ||
-            !$(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("review") || !$(".queNo tbody td.btn:nth-child(" + viewdiv + ")").hasClass("Ansreview")) {
-            // alert()
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("unattempted");
+        if (!$(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("attempted")) {
+            if (!$(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("Ansreview")) {
+                if (!$(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").hasClass("review")) {
+                    $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("unattempted");
+                }
+            }
         }
     }
 
     function saveNreview() {
         if ($(".Question:nth-child(" + viewdiv + ") table tbody td input").is(":checked")) {
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("unseen unattempted");
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("Ansreview");
+            if (viewdiv <= 10) {
+                viewrow = 1
+                viewqueNo = viewdiv
+            } else {
+                viewrow = Math.floor(viewdiv / 10)
+                viewrow = +viewrow + 1
+                viewqueNo = (viewdiv % 10)
+            }
+            $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("unattempted");
+            $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("Ansreview");
             viewdiv = +viewdiv + 1
             showdiv()
-        } else {
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("unseen unattempted");
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("review");
+        } 
+        else {
+            if (viewdiv <= 10) {
+                viewrow = 1
+                viewqueNo = viewdiv
+            } else {
+                viewrow = Math.floor(viewdiv / 10)
+                viewrow = +viewrow + 1
+                viewqueNo = (viewdiv % 10)
+            }
+            $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("unattempted");
+            $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("review");
             viewdiv = +viewdiv + 1
             showdiv()
         }
@@ -183,8 +210,16 @@ $(function () {
     $(".saveAnsbtn").click(function (e) {
         e.preventDefault();
         if ($(".Question:nth-child(" + viewdiv + ") table tbody td input").is(":checked")) {
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("unattempted");
-            $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("attempted");
+            if (viewdiv <= 10) {
+                viewrow = 1
+                viewqueNo = viewdiv
+            } else {
+                viewrow = Math.floor(viewdiv / 10)
+                viewrow = +viewrow + 1
+                viewqueNo = (viewdiv % 10)
+            }
+            $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("unattempted");
+            $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("attempted");
             viewdiv = +viewdiv + 1
             showdiv()
         } else {
@@ -196,15 +231,41 @@ $(function () {
         e.preventDefault();
         if ($(".Question:nth-child(" + viewdiv + ") input").is(":checked")) {
             $(".Question:nth-child(" + viewdiv + ") input").prop("checked", false);
+            $(".Question:nth-child(" + viewdiv + ") label").removeClass("bg-radio-btn");
         }
-        $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").removeClass("unseen attempted unattempted review Ansreview")
-        $(".QueNo tbody td.btn:nth-child(" + viewdiv + ")").addClass("unattempted")
+        if (viewdiv <= 10) {
+            viewrow = 1
+            viewqueNo = viewdiv
+        } else {
+            viewrow = Math.floor(viewdiv / 10)
+            viewrow = +viewrow + 1
+            viewqueNo = (viewdiv % 10)
+        }
+        $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").removeClass("Ansreviewns review attempted")
+        $(".QueNo tbody tr:nth-child(" + viewrow + ") td.btn:nth-child(" + viewqueNo + ")").addClass("unattempted")
     });
 
     // review button to mark question
     $(".reviewbtn").click(function (e) {
         e.preventDefault();
         saveNreview()
+    });
+
+     // back/next question buttons
+     $(".nextbtn").click(function (e) {
+        e.preventDefault();
+        if(viewdiv<=90){
+            viewdiv = +viewdiv + 1
+        }
+        showdiv()
+    });
+
+    $(".prevbtn").click(function (e) {
+        e.preventDefault();
+        if(viewdiv>=1){
+            viewdiv = +viewdiv - 1
+        }
+        showdiv()
     });
 
     // Question selection 
@@ -214,6 +275,7 @@ $(function () {
         if (!$(this).hasClass("attempted") && !$(this).hasClass("review") && !$(this).hasClass("Ansreview")) {
             $(this).addClass("unattempted")
             // alert(viewdiv)
+            viewqueNo = 1 + $(this).index()
         }
         $(".Question").css("display", "none");
         $(".Question:nth-child(" + viewdiv + ")").css("display", "block");

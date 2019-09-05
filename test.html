@@ -35,10 +35,10 @@
                 <span class="remainCounter">[00:00:00]</span>
             </span>
         </div>
-        <div class="d-flex p-2 align-self-center ml-auto topVertical" style="border: 3px solid white;">
-            <i class="fa fa-user text-light align-self-center" style="font-size:1.2vw;"></i>
-        </div>
-        <div class="d-flex text-light align-self-center mr-auto topVertical" style="width: 21%;font-size: 1vw;">
+        <div class="d-flex text-light align-self-center ml-auto mr-2 topVertical" style="width:21%;font-size: 1vw;">
+            <div class="d-flex p-2 align-self-center ml-auto topVertical" style="border: 3px solid white;">
+                <i class="fa fa-user text-light" style="font-size:1.2vw;"></i>
+            </div>
             <div class="d-flex flex-column pl-3 w-100">
                 <span>Candidate Name&nbsp;</span>
                 <span>Remaining Time</span>
@@ -61,7 +61,7 @@
             <a class="btn btn-primary mr-1 chembtn"><b>Chemistry</b></a>
             <a class="btn btn-primary mr-1 mathsbtn"><b>Mathematics</b></a>
         </div>
-        <div class="d-flex mr-4 align-items-center">
+        <div class="d-flex mr-4 align-items-center langSelect">
             <span class="text-right text-light mr-2">Paper Language</span>
             <select class="custom-select" style="width: 10vw;">
                 <option value="eng">English</option>
@@ -218,24 +218,23 @@
                     <div class="d-flex mt-2 justify-content-center legend">
                         <div class="d-flex flex-column justify-content-center MainColumn">
                             <div class="d-flex">
-                                <div class="btn"
-                                    style="background-image: url(assets/images/Logo1.png);background-size: 102% 101%;width: 35px">
+                                <div class="btn nvisit">
                                     90</div>
                                 <div class="btn d-inline mr-3"> Not Visited</div>
                             </div>
                             <div class="d-flex">
-                                <div class="btn visited">1</div>
+                                <div class="btn nvisit visited">1</div>
                                 <div class="btn d-inline">Not Answered &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                             </div>
                         </div>
                         <div class="d-flex flex-column justify-content-between hideInTablet">
                             <div class="d-flex">
-                                <div class="btn answered">0</div>
+                                <div class="btn nvisit answered">0</div>
                                 <div class="btn d-inline">Answered</div>
                             </div>
-                            <div class="d-flex">
-                                <div class="btn remark" style="height: 35px;">0</div>
-                                <div class="btn d-inline">Marked for Review</div>
+                            <div class="d-flex mt-1 ml-1">
+                                <div class="btn remark" style="height: 37px;">0</div>
+                                <div class="btn d-inline mt-1">Marked for Review</div>
                             </div>
                         </div>
                     </div>
