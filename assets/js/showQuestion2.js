@@ -36,30 +36,30 @@ $(function () {
     $(".radio-btn").click(function (e) {
         e.preventDefault();
         // alert()
-        if (!$(".radio-btn").hasClass("bg-radio-btn")) {
+        if (!$(".radio-btn").hasClass("btn-primary")) {
             $(this).children("input").attr('checked', true)
-            $(this).toggleClass("bg-radio-btn");
+            $(this).toggleClass("btn-primary");
         } else {
             $(".radio-btn input").attr('checked', false)
-            $(".radio-btn ").removeClass("bg-radio-btn")
+            $(".radio-btn ").removeClass("btn-primary")
             $(this).children("input").attr('checked', true)
-            $(this).toggleClass("bg-radio-btn");
+            $(this).toggleClass("btn-primary");
         }
     });
-    $(".radio-btn").css("transition", "transform .3s ease-in-out");
+    // $(".radio-btn").css("transition", "transform .3s ease-in-out");
 
-    $(".radio-btn").hover(
-        // Handler for mouseenter
-        function () {
-            $(this).css("transform", "scale(1.2)");
-            $(this).css("background-position", "right center");
+    // $(".radio-btn").hover(
+    //     // Handler for mouseenter
+    //     function () {
+    //         $(this).css("transform", "scale(1.2)");
+    //         $(this).css("background-position", "right center");
 
-        },
-        // Handler for mouseleave
-        function () {
-            $(this).css("transform", "scale(1)");
-        }
-    );
+    //     },
+    //     // Handler for mouseleave
+    //     function () {
+    //         $(this).css("transform", "scale(1)");
+    //     }
+    // );
 
 
     // Counter
@@ -231,7 +231,7 @@ $(function () {
         e.preventDefault();
         if ($(".Question:nth-child(" + viewdiv + ") input").is(":checked")) {
             $(".Question:nth-child(" + viewdiv + ") input").prop("checked", false);
-            $(".Question:nth-child(" + viewdiv + ") label").removeClass("bg-radio-btn");
+            $(".Question:nth-child(" + viewdiv + ") label").removeClass("btn-primary");
         }
         if (viewdiv <= 10) {
             viewrow = 1

@@ -24,26 +24,26 @@
                 <img src="assets/images/photon logo.png" alt="Quiz logo" class="w-100">
             </a>
         </div>
-        <div class="d-flex align-self-center thinBar text-light ml-auto mr-auto">
-            <a class="btn btn-primary ml-3 mr-1 mt-1 mb-1 phybtn"><b>Physics</b></a>
+        <div class="d-flex flex-1 align-items-center text-center thinBar text-light ml-auto mr-auto">
+            <a class="btn btn-primary mr-1 mt-1 mb-1 phybtn"><b>Physics</b></a>
             <a class="btn btn-primary mr-1 mt-1 mb-1 chembtn"><b>Chemistry</b></a>
             <a class="btn btn-primary mr-1 mt-1 mb-1 mathsbtn"><b>Mathematics</b></a>
         </div>
-        <div class="d-flex thinBar">
-            <span class="btn btn-dark mt-1 mb-1">Candidate Name <span>: [Your Name]</span></span>
-            <span class="btn btn-dark mt-1 mb-1 mr-3"> Remaining Time 
+        <div class="d-flex flex-column thinBar text-light" style="font-size: 1.5vw;">
+            <span class="d-flex mt-1 mb-1 mr-2">Candidate Name <span>: [Your Name]</span></span>
+            <span class="d-flex mt-1 mb-1 mr-3"> Remaining Time : 
                 <span class="remainCounter">[00:00:00]</span>
             </span>
         </div>
-        <div class="d-flex text-light align-self-center ml-auto mr-2 topVertical" style="width:21%;font-size: 1vw;">
-            <div class="d-flex p-2 align-self-center ml-auto topVertical" style="border: 3px solid white;">
+        <div class="d-flex text-light align-self-center align-items-center justify-content-center ml-auto mr-1 topVertical" style="font-size: 1vw;">
+            <div class="d-flex p-2 align-self-center topVertical" style="border: 3px solid white;">
                 <i class="fa fa-user text-light" style="font-size:1.2vw;"></i>
             </div>
-            <div class="d-flex flex-column pl-3 w-100">
+            <div class="d-flex flex-column pl-3">
                 <span>Candidate Name&nbsp;</span>
                 <span>Remaining Time</span>
             </div>
-            <div class="d-flex flex-column w-100">
+            <div class="d-flex flex-column pr-3">
                 <span class="text-warning">[Your Name]</span>
                 <span class="remainCounter text-warning">[00:00:00]</span>
             </div>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 p-0 Qselect">
-                    <div class="questionNo row m-0 pl-2 pr-1" style="overflow: auto;height: 67%;">
+                    <div class="questionNo row m-0 pl-2 pr-1" style="overflow: auto;height: 45%;">
                         <table class="queNo h-50 w-100 text-center">
                             <tbody>
                                 <tr>
@@ -215,70 +215,41 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="d-flex mt-2 justify-content-center legend">
-                        <div class="d-flex flex-column justify-content-center MainColumn">
-                            <div class="d-flex">
-                                <div class="btn nvisit">
-                                    90</div>
-                                <div class="btn d-inline mr-3"> Not Visited</div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="btn nvisit visited">1</div>
-                                <div class="btn d-inline">Not Answered &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column justify-content-between hideInTablet">
-                            <div class="d-flex">
-                                <div class="btn nvisit answered">0</div>
-                                <div class="btn d-inline">Answered</div>
-                            </div>
-                            <div class="d-flex mt-1 ml-1">
-                                <div class="btn remark" style="height: 37px;">0</div>
-                                <div class="btn d-inline mt-1">Marked for Review</div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="d-flex flex-row align-items-center justify-content-center legend">
-                        <span class="btn saveNremark mb-2" style="height:35px;">0</span>
-                        <span class="btn d-inline">
-                            Answered &
-                            Marked for Review <br> (will be considered for evaluation)
-                        </span>
+                    <div class="mt-4">
+                        <table class="table table-light text-center table-borderless w-75" style="margin: 0 auto;">
+                            <thead>
+                                <tr>
+                                    <td class="p-0">ICON</td>
+                                    <td class="p-0">Tag</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-0"><span class="btn nvisit"></span></td>
+                                    <td class="p-0 pt-2"><span>Not Visited</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0"><span class="btn nvisit visited"></span></td>
+                                    <td class="p-0 pt-2"><span>Not Answered</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0"><span class="btn nvisit answered"></span></td>
+                                    <td class="p-0 pt-2"><span>Answered</span></td>
+                                </tr>
+                                 <tr>
+                                    <td class="p-0 pt-2"><span class="btn remark ml-1" style="height: 2.5vw;width:60%;"></span></td>
+                                    <td class="p-0 pt-2"><span>Marked for review</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0 pt-2"><span class="btn saveNremark ml-1" style="height: 2.5vw;width:60%;"></span></td>
+                                    <td class="p-0 pt-2"><span>Answered & Marked for review<br>(will be considered for evaluation)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-success submit pt-0 pb-0 mb-0"><b>Submit Test</b></button>
+                        <button class="btn btn-success submit mb-0 w-50 mt-4"><b>Submit Test</b></button>
                     </div>
-                    <!-- <div class="card pl-4 m-0 mt-1" style="border:none;">
-                        <div class="card-body p-0 legend">
-                            <div>
-                                <div class="row w-100">
-                                    <div class="col-md-5 p-0">
-                                        <div class="btn"
-                                            style="background-image: url(assets/images/Logo1.png);background-size: 102% 101%;width: 35px">
-                                            90</div>
-                                        <div class="btn d-inline"> Not Visited</div>
-                                    </div>
-                                    <div class="col-md-7 p-0">
-                                        <div class="btn visited">1</div>
-                                        <div class="btn d-inline"> Not Answered</div>
-                                    </div>
-                                </div>
-                                <div class="row w-100">
-                                    <div class="col-md-5 p-0 mt-1">
-                                        <div class="btn answered">0</div>
-                                        <div class="btn d-inline">Answered</div>
-                                    </div>
-                                    <div class="col-md-7 p-0 mt-1">
-                                        <div class="btn remark" style="height: 35px;">0</div>
-                                        <div class="btn d-inline">Marked for Review</div>
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

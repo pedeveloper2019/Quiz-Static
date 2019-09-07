@@ -46,7 +46,7 @@ img{
 }
 .nvisit{
     /* border: 1px solid #ddd; */
-    width: 2.9vw;
+    width: 2.89vw;
     height: 33px;
     padding: 0;
     padding-top: .4vh;
@@ -129,24 +129,12 @@ img{
 .fixedbtns{
     position: absolute;bottom:0px;
 }
-.legend .d-inline{
-    font-size: 1vw;
-}
-.legend{
-    font-size: 1vw;
-}
 .wrapper{
     /* padding-left:10%; */
     /* padding-right: 10%; */
     width: 97vw;
     height: 83vh;
     /* border: 1px solid red; */
-}
-.legend{
-    /* position: fixed; */
-    bottom: 0px;
-    /* border: 1px solid red; */
-    width: 30vw;
 }
 .questionsCard{
     overflow: auto;border: none;
@@ -244,7 +232,7 @@ img{
 }
 @media (min-width:100px) and (max-width: 540px){
     .nvisit{
-        width: 8%;
+        width: 9%;
         margin-left: 1%;
         margin-bottom: 1%;
     }
@@ -253,6 +241,9 @@ img{
 @media (max-width: 650px){
     .langSelect{
         display: none !important;
+    }
+    .btnrow .btn{
+        font-size: 2.5vw;
     }
 }
 
