@@ -46,7 +46,7 @@ img{
 }
 .nvisit{
     /* border: 1px solid #ddd; */
-    width: 2.89vw;
+    width: 2.8vw;
     height: 33px;
     padding: 0;
     padding-top: .4vh;
@@ -154,6 +154,9 @@ img{
     width: 100%;
     display: none;
 }
+.questionNo{
+    overflow: auto;height: 45%;
+}
 .questionNo::-webkit-scrollbar-track,.questionsCard::-webkit-scrollbar-track
 {
     border-radius: 10px;
@@ -180,31 +183,42 @@ img{
     width: 2vw;
     cursor: pointer;
     padding-left: .7vw;
+    z-index: 400;
 }
+.legend{
+    margin-top: 1.5vw;
+    /* border: 1px solid red; */
+}
+.legend table {
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 75%;
+}
+.legend-icons{
+    height: 35px !important;
+    width:35px !important;
+}
+
 /* responsive css */
-@media (min-width:100px) and (max-width: 990px){
-    /* .logo{
+@media (min-width:990px){
+    .legend table{
         width: 100%;
-        text-align: center;
     }
-    .logo img{
-        width: 20%;
+}
+@media (min-width:100px) and (max-width: 990px){
+    .questionNo{
+        height: 90%;
     }
-    .CadDetails{
-        width: 80%;
-        padding-left: 5%;
-    } */
     .hideInTablet{
         display: none !important;
     }
-    .legend{
-        width: 100%;
-    }
-    .legend .d-inline{
-        font-size: 2vh;
+    .legend table{
+        /* font-size: 2vw; */
+        width: 50%;
+        text-align: center;
     }
     .nvisit{
-        width: 40px;
+        width: 6%;
         margin-left: 2%;
         margin-bottom: 1%;
     }
@@ -212,7 +226,7 @@ img{
         max-height: 53vh;
     }
     .QWrapper{
-        max-height: 83vh;
+        height: 100%;
     }
     .wrapper{
         height: 185vh !important;
@@ -229,16 +243,42 @@ img{
         /* padding: 0px; */
         font-size: 1.5vw;
     }
+    .Qselect{
+        margin-top: 2vh;
+        height: 61vh;
+        /* border: 1px solid red; */
+    }
 }
-@media (min-width:100px) and (max-width: 540px){
+@media (min-width:100px) and (max-width: 560px){
     .nvisit{
         width: 9%;
         margin-left: 1%;
         margin-bottom: 1%;
     }
-    
+    .questionsCard{
+        height: 45vh;
+    }
 }
-@media (max-width: 650px){
+@media (min-width:350px) and (max-width: 650px){
+    .langSelect{
+        display: none !important;
+    }
+    .btnrow .btn{
+        font-size: 2.5vw;
+    }
+    .legend table{
+        /* font-size: 2vw; */
+        width: 90%;
+        text-align: center;
+    }
+}
+@media (max-width:350px){
+    .legend table{
+        /* font-size: 2vw; */
+        width: 98% !important;
+        text-align: center;
+        font-size: 4vw;
+    }
     .langSelect{
         display: none !important;
     }
@@ -246,7 +286,6 @@ img{
         font-size: 2.5vw;
     }
 }
-
 
 /* ========================= Test2 Style ========================== */
 .flex-1{

@@ -51,10 +51,9 @@ $(function () {
     function createDivs() {
         for (let index = 1; index <= 90; index++) {
             $(".questions").append(`<div class="question" style="border: 0px solid red;">
-            <h4 class="p-2" style="border-bottom: 1px solid black;">Question ` + index + ` : </h4>
+            <h4 class="p-2" style="border-bottom: 1px solid #25b5e9;">Question ` + index + ` : </h4>
             <img class="w-50" src="assets/images/questions/` + index + `.png" alt="">
-            <table class="table table-borderless mt-2 p-5"
-                style="border-bottom: 1px solid black;">
+            <table class="table table-borderless mt-2 p-5">
                 <tbody>
                     <tr>
                         <td> 1 ) <input type="radio" value="1" name="Question` + index + `" id="rOption1_1">
