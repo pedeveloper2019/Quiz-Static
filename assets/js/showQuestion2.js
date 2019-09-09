@@ -82,7 +82,7 @@ $(function () {
     function createDivs() {
         for (let index = 1; index <= 90; index++) {
             $(".Questions").append(`<div class="Question">
-            <div class="d-flex justify-content-between row ml-1 pb-2 w-100" style="border-bottom: 1px solid #25b5e9;color: #333;font-size:1.5vw">
+            <div class="d-flex justify-content-between row ml-1 pb-2 w-100" style="border-bottom: 3px solid #25b5e9;color: #333;font-size:1.5vw">
                 <div class="flex-1 font-weight-bold">Question No: ` + index + `</div>
                 <div class="flex-1 text-right font-weight-bold">Single Choice Type Question</div>
             </div>
