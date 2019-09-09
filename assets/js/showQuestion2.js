@@ -17,12 +17,12 @@ $(function () {
     height = $(".header").height();
     $(".mainContainer").css("top", height);
     Width = $(window).width();
-    if (Width > 900) {
+    if (Width > 1000) {
         $(".slider").click(function (e) {
             e.preventDefault();
             // alert()
             $(".rightSide").toggleClass("sideLength1");
-            $(".leftSide").toggleClass("col-xl-12")
+            $(".leftSide").toggleClass("col-xl-12 col-lg-12 col-md-12 ")
         });
     }
     else {
