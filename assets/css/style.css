@@ -906,6 +906,9 @@ img{
         /* display: none; */
         width: 70vw;
     }
+    .rightBottomBtns{
+        font-size: 2vw;
+    }
     .Qfooter{
         width: 93%;
     }
