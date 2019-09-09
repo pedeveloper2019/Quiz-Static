@@ -626,7 +626,7 @@ img{
 }
 .Qwrapper{
     height: 81%;overflow: auto;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     width: 100%;
     margin-left: 0px !important;
 }
