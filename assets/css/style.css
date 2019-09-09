@@ -617,6 +617,9 @@ img{
 .QuestionImg{
     margin: 0 auto;
 }
+.respbtns{
+    display: none !important;
+}
 
 @media  (max-width:990px){
     .slider{
@@ -638,7 +641,7 @@ img{
         right: 0px;
     }
     .Qwrapper{
-        height: 80%;
+        height: 75%;
     }
     .Qfooter{
         padding-top: 2vh;
@@ -1017,8 +1020,8 @@ img{
         right:-.1vw;
     }
     .legends .unseen{
-        width:3vw;
-        height: 3vw;
+        width:4.5vw;
+        height: 4.5vw;
         /* margin-left: 1px !important; */
         margin-right: 1vw;
         border: none !important;
@@ -1028,11 +1031,10 @@ img{
         border-radius: 50%;
         position: relative;
         float: left;
-        border: 1px solid red;
     }
     .legends .attempted{
-        width: 3vw;
-        height: 3vw;
+        width: 4.5vw;
+        height: 4.5vw;
         /* margin-left: -3.7vw; */
         margin-right: 1vw;
         border: none !important;
@@ -1046,17 +1048,17 @@ img{
     .legends .attempted::before{
         width: 0;
         height: 0;
-        border-left: 1.5vw solid transparent;
-        border-right: 1.5vw solid transparent;
-        border-bottom: .8vw solid #29B999;
+        border-left: 2.3vw solid transparent;
+        border-right: 2.3vw solid transparent;
+        border-bottom: 1vw solid #29B999;
         content: "";
         position: absolute;
-        top: -.8vw;
+        top: -1vw;
         left: 0;
     }
     .legends .unattempted{
-        width: 3vw;
-        height: 3vw;
+        width: 4.5vw;
+        height: 4.5vw;
         /* margin-left: -1vw; */
         margin-right: 1vw;
         border: none !important;
@@ -1070,17 +1072,17 @@ img{
     .legends .unattempted::after{
         width: 0;
         height: 0;
-        border-left: 1.5vw solid transparent;
-        border-right: 1.5vw solid transparent;
-        border-top: .8vw solid #ED6060;
+        border-left: 2.3vw solid transparent;
+        border-right: 2.3vw solid transparent;
+        border-top: 1vw solid #ED6060;
         content: "";
         position: absolute;
-        bottom: -.8vw;
+        bottom: -1vw;
         left: 0;
     }
     .legends .review{
-        width:3vw;
-        height: 3vw;
+        width:4.5vw;
+        height: 4.5vw;
         margin-right: 1vw;
         border: none !important;
         background-color:#565FB8 ;
@@ -1091,8 +1093,8 @@ img{
         position: relative;
     }
     .legends .Ansreview{
-        width:3vw;
-        height: 3vw;
+        width:4.5vw;
+        height: 4.5vw;
         margin-right: 1vw;
         border: none !important;
         background-color:#565FB8 ;
@@ -1106,23 +1108,31 @@ img{
         content: '\2713';
         position: relative;
         top: .7vw;
-        right: -2vw;
+        right: -2.5vw;
         background-color: #86D37C;
         border-radius: 50%;
-        font-size: .8vw;
+        font-size: 1.3vw;
         border: .1vw solid #fff;
         padding:.1vw .3vw;
         text-indent: 0px;
     }
     .legends td{
         padding:0px;
-        padding-top: 1vw;
+        padding-top: 1.5vw;
         padding-left: 1vw;
-        padding-bottom: .3vw;
-        font-size: 2vw;
+        padding-bottom: .8vw;
+        font-size: 3vw;
     }
 }
-
+@media (max-width:690px){
+    .respbtns{
+        display: flex !important;
+        text-align: center !important;
+    }
+    .fsbtns{
+        display: none !important;
+    }
+}
 
 /* Summary Page Style */
 
