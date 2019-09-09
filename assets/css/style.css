@@ -524,7 +524,7 @@ img{
 }
 .legends .attempted{
     width: 2vw;
-    height: 2vw;
+    height: 1.8vw;
     /* margin-left: -3.7vw; */
     margin-right: 1vw;
     border: none !important;
@@ -548,7 +548,7 @@ img{
 }
 .legends .unattempted{
     width: 2vw;
-    height: 2vw;
+    height: 1.8vw;
     /* margin-left: -1vw; */
     margin-right: 1vw;
     border: none !important;
