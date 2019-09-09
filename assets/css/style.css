@@ -46,12 +46,12 @@ img{
 }
 .nvisit{
     /* border: 1px solid #ddd; */
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
     width: 2.8vw;
-    height: 33px;
+    height: 2.8vw;
     padding: 0;
-    padding-top: .4vh;
-    margin-left: .2vw;
-    margin-top: .4vw;
     border-radius: 20%;
     background-image: url(../../assets/images/Logo1.png) !important;
     background-size: 100% 100%;
@@ -117,7 +117,7 @@ img{
 }
 .QWrapper{
     /* border: 1px solid red; */
-    height: 83vh;
+    height: fit-content;
     padding-right: 0px;
     overflow: auto;
 }
@@ -133,7 +133,7 @@ img{
     /* padding-left:10%; */
     /* padding-right: 10%; */
     width: 97vw;
-    height: 83vh;
+    height: fit-content;
     /* border: 1px solid red; */
 }
 .questionsCard{
@@ -147,7 +147,7 @@ img{
     overflow: hidden;
     margin-left: 1%;
     /* padding: 0px; */
-    font-size: .9vw;
+    font-size: 1.1vw;
 }
 .question{
     position: absolute;
@@ -186,7 +186,8 @@ img{
     z-index: 400;
 }
 .legend{
-    margin-top: 1.5vw;
+    margin-top: 2.5vw;
+    /* font-size: 1vw; */
     /* border: 1px solid red; */
 }
 .legend table {
@@ -209,6 +210,13 @@ img{
     .questionNo{
         height: 90%;
     }
+    .nvisit{
+        display: inline-block;
+        margin-left: 4%;
+        font-size: 1.5vw;
+        transform: scale(1.5);
+        margin-top: 4%;
+    }
     .hideInTablet{
         display: none !important;
     }
@@ -216,11 +224,6 @@ img{
         /* font-size: 2vw; */
         width: 50%;
         text-align: center;
-    }
-    .nvisit{
-        width: 6%;
-        margin-left: 2%;
-        margin-bottom: 1%;
     }
     .questionsCard{
         max-height: 53vh;
@@ -250,13 +253,18 @@ img{
     }
 }
 @media (min-width:100px) and (max-width: 560px){
-    .nvisit{
-        width: 9%;
-        margin-left: 1%;
-        margin-bottom: 1%;
-    }
     .questionsCard{
         height: 45vh;
+    }
+    .nvisit{
+        display: inline-block;
+        margin-left: 6%;
+        font-size: 1.5vw;
+        transform: scale(3);
+        margin-top: 7%;
+    }
+    .questionNo{
+        height: fit-content;
     }
 }
 @media (min-width:350px) and (max-width: 650px){
