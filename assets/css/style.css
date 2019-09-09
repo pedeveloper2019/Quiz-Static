@@ -13,6 +13,7 @@
 img{
     pointer-events: none;
 }
+
 /* .Answered{
     width: 2.6vw; 
     height: 30px;
@@ -198,6 +199,10 @@ img{
 .legend-icons{
     height: 35px !important;
     width:35px !important;
+}
+.queNo{
+    border-collapse:separate; 
+    border-spacing:20% 20%; 
 }
 
 /* responsive css */
